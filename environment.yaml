@@ -1,0 +1,7 @@
+name: default
+description: "CMOBANK CMO strategy agent"
+config:
+  packages: {}
+  networking:
+    type: unrestricted
+  env: []
