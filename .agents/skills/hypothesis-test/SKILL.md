@@ -12,6 +12,7 @@ Before producing output, always read the core knowledge files:
 
 - `knowledge/cmobank-principles.md`
 - `knowledge/cmo-workflow.md`
+- `knowledge/quality-gates.md`
 - `knowledge/output-templates.md`
 - `knowledge/anti-patterns.md`
 - `knowledge/glossary.md`
@@ -65,6 +66,8 @@ For deeper grounding, read `cmobank-book/chapter-outline.md` first, then use the
    - continue
    - change
    - stop
+9. Record the hypothesis, test design, and (later) results in `memory/<事業スラッグ>.md` per `memory/README.md`, so the next session resumes from the verified state instead of re-proposing.
+10. Run section E of `knowledge/review-checklist.md` before output.
 
 ## Output Format
 

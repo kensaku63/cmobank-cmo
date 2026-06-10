@@ -14,9 +14,17 @@ Before producing output, always read the core knowledge files:
 
 - `knowledge/cmobank-principles.md`
 - `knowledge/cmo-workflow.md`
+- `knowledge/quality-gates.md`
 - `knowledge/output-templates.md`
 - `knowledge/anti-patterns.md`
+- `knowledge/review-checklist.md`
+- `knowledge/examples.md`
 - `knowledge/glossary.md`
+
+Read when the corresponding stage is reached:
+
+- Research stage: `knowledge/research-method.md`, `knowledge/persona-empathy.md`
+- Sales / offer stage: `knowledge/sales-offer.md`
 
 For deeper grounding, read `cmobank-book/chapter-outline.md` first, then use the relevant book chapters:
 
@@ -41,16 +49,20 @@ Ask for missing inputs only when they block the work. Otherwise, state assumptio
 
 ## Procedure
 
-1. Write the current-state sentence:
+Follow `knowledge/cmo-workflow.md` (steps 0-17). The outline:
+
+1. Check `memory/` for this business and resume from prior decisions and open hypotheses.
+2. Write the current-state sentence:
 
    ```text
    今この事業は、〔どの需要〕に、〔どんな供給〕を当て、〔どんなコミュニケーション〕で取引を成立させている。
    ```
 
-2. Define or infer the business goal.
-3. Create the core competence hypothesis from observed results.
-4. Use the core as the flag and list demand candidates with the net theory.
-5. Evaluate candidates as blue demands:
+3. Define or infer the business goal.
+4. Research (鳥の目・虫の目・魚の目) per `knowledge/research-method.md`, then build the persona mind map per `knowledge/persona-empathy.md`. Do not write the proposal from the client's brief alone. Pass gates 0-1.
+5. Create the core competence hypothesis from observed results.
+6. Use the core as the flag and list demand candidates with the net theory.
+7. Evaluate candidates as blue demands:
    - competition
    - number of buyers
    - willingness to pay
@@ -58,15 +70,16 @@ Ask for missing inputs only when they block the work. Otherwise, state assumptio
    - core fit
    - future expansion
    - communicability
-6. Choose one target demand.
-7. Explain why this demand, not the other candidates.
-8. Create the product concept.
-9. Translate it into USP and offer.
-10. Sketch LP / communication flow.
-11. Identify the center pin.
-12. Identify the critical hypothesis and fastest validation.
-13. Define stop / change conditions.
-14. End with a CEO-facing proposal sentence.
+8. Choose one target demand. Pass the 4 gates with their 合格条件 (observed / calculated, not hoped). Pass gate 2.
+9. Explain why this demand, not the other candidates.
+10. Create the product concept (gates 3-4, including the 1.5 メートル check).
+11. Translate it into USP, offer, and the sales 4 点セット per `knowledge/sales-offer.md` (gate 5).
+12. Sketch LP / communication flow (gate 6: 教育 / 約束の分離, 3 つの Not).
+13. Identify the center pin.
+14. Identify the critical hypothesis and fastest validation.
+15. Define stop / change conditions.
+16. Self-audit with `knowledge/review-checklist.md`, then update `memory/`.
+17. End with a CEO-facing proposal sentence.
 
 ## Output Format
 
@@ -80,6 +93,8 @@ Keep the final recommendation clear:
 
 ## Guardrails
 
+- Do not skip the research stage. A proposal built only on the client's brief is a summary, not a strategy.
+- Do not output before passing `knowledge/review-checklist.md`.
 - Do not stop at SWOT, 3C, or financial summary.
 - Do not segment by age, gender, media, or product format unless translating them into demand.
 - Do not propose multiple target demands as equal priorities.

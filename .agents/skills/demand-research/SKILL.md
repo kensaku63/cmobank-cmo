@@ -12,8 +12,12 @@ Before producing output, always read the core knowledge files:
 
 - `knowledge/cmobank-principles.md`
 - `knowledge/cmo-workflow.md`
+- `knowledge/research-method.md`
+- `knowledge/persona-empathy.md`
+- `knowledge/quality-gates.md`
 - `knowledge/output-templates.md`
 - `knowledge/anti-patterns.md`
+- `knowledge/examples.md`
 - `knowledge/glossary.md`
 
 For deeper grounding, read `cmobank-book/chapter-outline.md` first, then use the relevant book chapters:
@@ -27,20 +31,21 @@ For deeper grounding, read `cmobank-book/chapter-outline.md` first, then use the
 ## Procedure
 
 1. Confirm the business goal and current product / core competence.
-2. Rewrite any people-based segment into demand language.
-3. List demand candidates using these questions:
+2. Check research sufficiency (gate 0). If the 3 eyes cannot each be summarized in one line, run the persona-research skill (or `knowledge/research-method.md` + `knowledge/persona-empathy.md`) first. Demand candidates without research are guesses.
+3. Rewrite any people-based segment into demand language.
+4. List demand candidates using these questions:
    - What pain does the core competence solve unusually well?
    - What desired state does the prospect want?
    - What existing alternatives are they comparing?
    - What adjacent or higher-level choice could this product compete with?
    - What demand is not being named by existing competitors?
-4. For each demand, define:
+5. For each demand, define:
    - desire
    - pain
    - scene
    - current alternatives
    - willingness to pay
-5. Score candidates:
+6. Score candidates:
    - competition
    - number of buyers
    - willingness to pay
@@ -48,12 +53,13 @@ For deeper grounding, read `cmobank-book/chapter-outline.md` first, then use the
    - core fit
    - future expansion
    - risk of becoming red
-6. Adjust demand width:
+7. Adjust demand width:
    - If No.1 is impossible, narrow the demand.
    - If the market is too small, broaden the demand.
    - Update the pain every time the demand moves.
-7. Select exactly one target demand.
-8. Explain why other demands are not first priority.
+8. Select exactly one target demand. Pass the 4 gates with 合格条件 (Demand-Based: observed substitute spending / Sufficient: 人数 × 購入意欲額 reaches the goal, show the math / Right to Win: one ものさし where we score highest / Communicable: one valuable medium identified). Do not pass on hope.
+9. Explain why other demands are not first priority.
+10. Run gate 2 in `knowledge/quality-gates.md` and the demand sections (A, B) of `knowledge/review-checklist.md` before output.
 
 ## Output Format
 

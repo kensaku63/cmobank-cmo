@@ -7,10 +7,12 @@ CMOBANK のマーケティングノウハウを使い、事業の上流戦略を
 ## できること
 
 - 現状事業を需要・供給・コミュニケーションの一文に分解する
-- コアコンピタンスから青い需要候補を広げ、狙う需要を 1 つに絞る
-- 商品コンセプト、USP、オファー、LP / ファネル案を設計する
+- 鳥の目・虫の目・魚の目でリサーチし、ペルソナ脳内マップで生の痛みに憑依する
+- コアコンピタンスから青い需要候補を広げ、4 つのゲートで判定して狙う需要を 1 つに絞る
+- 商品コンセプト、USP、オファー、セールス(4 点セット + クロージング)、LP / ファネル案を設計する
 - センターピン、重要仮説、最小検証、撤退・変更条件を提案する
 - 社長・事業責任者に向けた CMO 提案書を作る
+- 事業ごとの確定事項・検証結果を `memory/` に蓄積し、session をまたいで仮説検証ループを回す
 
 ## 向いている依頼
 
@@ -65,14 +67,25 @@ aachat session run cmobank-cmo --project <project> "この事業の CMO 提案�
 
 - `identity.md`: エージェントの人格・役割・判断基準の正本
 - `environment.yaml`: 必要な実行環境
-- `knowledge/`: CMOBANK マーケティング原則、CMO ワークフロー、出力テンプレート
+- `knowledge/`: CMOBANK マーケティングの実務正本
+  - `cmobank-principles.md`: 原則(需要・供給・コミュニケーション、青い需要、4 つのゲート)
+  - `cmo-workflow.md`: 17 ステップのワークフロー(リサーチ → 需要 → コンセプト → セールス → 検証)
+  - `research-method.md`: 鳥の目・虫の目・魚の目のリサーチ手順と実調査の方法
+  - `persona-empathy.md`: ペルソナ脳内マップと憑依の手順
+  - `sales-offer.md`: セールス 4 点セット、オファー 4 要素、クロージング、3 つの Not
+  - `quality-gates.md`: 各工程の進出条件と差し戻し先
+  - `review-checklist.md`: 出力直前のセルフ監査
+  - `examples.md`: 良い例・悪い例の対比集
+  - `output-templates.md` / `anti-patterns.md` / `glossary.md`
 - `cmobank-book/`: CMOBANK マーケティングノウハウ本。`knowledge/` より深い章単位の背景理解・用語定義・思考プロセスの参照先
-- `memory/`: session 間で引き継ぐ状態
-- `.agents/skills/`: 実行時に使う専用 skill
+- `memory/`: session 間で引き継ぐ事業ステート(形式は `memory/README.md`)
+- `.agents/skills/`: 実行時に使う専用 skill(persona-research / cmo-strategy / demand-research / product-concept / lp-funnel / hypothesis-test)
 
 ## 知識の読み方
 
 この agent は、依頼対応時にまず `knowledge/` を必ず読みます。`cmobank-book/` は、`knowledge/` だけでは判断が浅くなるとき、用語の厳密な定義や章単位の背景を確認するために参照します。
+
+各工程は `knowledge/quality-gates.md` のゲートを通らなければ次へ進めず、出力前には `knowledge/review-checklist.md` のセルフ監査を必ず行います。
 
 ## 注意
 

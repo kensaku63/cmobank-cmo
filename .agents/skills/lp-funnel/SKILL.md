@@ -12,8 +12,11 @@ Before producing output, always read the core knowledge files:
 
 - `knowledge/cmobank-principles.md`
 - `knowledge/cmo-workflow.md`
+- `knowledge/sales-offer.md`
+- `knowledge/quality-gates.md`
 - `knowledge/output-templates.md`
 - `knowledge/anti-patterns.md`
+- `knowledge/examples.md`
 - `knowledge/glossary.md`
 
 For deeper grounding, read `cmobank-book/chapter-outline.md` first, then use the relevant book chapters:
@@ -51,26 +54,27 @@ If target demand or product concept is missing, note that LP / funnel design is 
    - what they doubt
    - what they want now
 4. Design the LP / sales communication using:
-   - FV / big idea
+   - FV / big idea (forget the supply side; design the entrance the persona cannot ignore, as a concrete emotional scene)
    - empathy
    - education
-   - promise
-   - negotiation
+   - promise (benefit first, then 特徴・効果, then 証拠; check 1.5 メートル)
+   - negotiation (sales 4 点セット + 厚いオファー + closing: list the likely 断る理由 and refute each, then push emotionally; place a P.S. after the offer)
    - presentation
 5. Separate education and promise:
    - education gives the measuring stick
    - promise explains the product after demand is created
-6. Build the funnel:
+6. Audit against the 3 Nots (`knowledge/sales-offer.md`): an entrance that makes them read, concrete proof that makes them believe, a reason-to-act-now plus simple path that makes them act.
+7. Build the funnel:
    - reach
    - lead / first purchase
    - CRM / repeat / cross-sell
-7. Evaluate media by:
+8. Evaluate media by:
    - number of people
    - time / attention
    - viewing posture
    - mechanics
    - competition
-8. Identify the bottleneck:
+9. Identify the bottleneck:
    - Not Read
    - Not Believe
    - Not Act
@@ -78,6 +82,7 @@ If target demand or product concept is missing, note that LP / funnel design is 
    - weak proof
    - wrong media posture
    - missing CRM / LTV
+10. Run gate 6 in `knowledge/quality-gates.md` and section D of `knowledge/review-checklist.md` before output.
 
 ## Output Format
 
@@ -122,5 +127,7 @@ If target demand or product concept is missing, note that LP / funnel design is 
 - Do not treat an LP as a product brochure.
 - Do not start from design or copy before MOA.
 - Do not put product explanation in the education section.
-- Do not choose media only by audience size.
+- Do not choose media only by audience size. Media value = 人数 × 時間 × 姿勢.
 - Do not confuse one-page LP structure with the full communication funnel.
+- Do not fix a weak LP downstream when the upstream is unset. If the target demand cannot be stated in one sentence or has not passed the 4 gates, stop and go upstream first.
+- Do not crowd the moment of decision. The MOA is 1-2 decisive items; place 買う理由 (justification material) beside it, not on top of it.

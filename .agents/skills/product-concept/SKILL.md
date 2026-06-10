@@ -12,8 +12,11 @@ Before producing output, always read the core knowledge files:
 
 - `knowledge/cmobank-principles.md`
 - `knowledge/cmo-workflow.md`
+- `knowledge/sales-offer.md`
+- `knowledge/quality-gates.md`
 - `knowledge/output-templates.md`
 - `knowledge/anti-patterns.md`
+- `knowledge/examples.md`
 - `knowledge/glossary.md`
 
 For deeper grounding, read `cmobank-book/chapter-outline.md` first, then use the relevant book chapters:
@@ -39,12 +42,13 @@ If target demand is missing, stop and define it first. A product concept cannot 
 ## Procedure
 
 1. Restate the target demand in demand language.
-2. List product features.
+2. List product features (aim for 10+; divergence first).
 3. Convert features into objective effects.
 4. Convert effects into benefits:
    - positive emotion
    - desired state
    - scene where the user feels it
+   - check the 1.5 メートル rule: realistic and half a step ahead — not "人生が変わる" (too far), not "少し楽になる" (too near)
 5. Attach proof to each important benefit:
    - results
    - testimonials
@@ -70,11 +74,13 @@ If target demand is missing, stop and define it first. A product concept cannot 
    〔独自の強み〕によって、〔ベネフィット〕を、〔オファー〕で提供します。
    ```
 
-9. Design the offer with:
-   - good deal
-   - low risk
-   - reason to act now
-   - clarity
+9. Design the offer with (`knowledge/sales-offer.md`):
+   - good deal (主観的なお得感)
+   - low risk (リスクリバーサルは申し込みの不安に紐づける)
+   - reason to act now (オファー自体に制限を組み込む)
+   - clarity (何を・いくらで・どうすれば、まで)
+10. Check the sales 4 点セット: ベネフィット・正しい痛み・No.1 の理由・厚いオファー.
+11. Run gates 3-4 in `knowledge/quality-gates.md` and section C of `knowledge/review-checklist.md` before output.
 
 ## Output Format
 
@@ -114,5 +120,6 @@ If target demand is missing, stop and define it first. A product concept cannot 
 - Do not create a concept before target demand is defined.
 - Do not list many values as the concept. Compress to one value.
 - Do not confuse feature with benefit.
-- Do not present a benefit without proof.
+- Do not present a benefit without proof, and do not attach proof unrelated to the benefit (家電大賞 for リラックス is noise).
 - Do not confuse concept with catch copy. Concept is internal; copy is external expression.
+- If the concept comes out generic (高品質な◯◯), treat it as a research shortage signal and go back to persona-research, not wordsmithing.
