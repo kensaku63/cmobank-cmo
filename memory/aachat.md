@@ -21,7 +21,7 @@
 ## 検証結果ログ
 - 2026-07-13: registry 登録 14 件中 13 publish / 1 decline(Build with us、「共犯者」という言葉が理由)
 - 2026-07-14〜17: kensaku が concern 8 件・endorsement 1 件(B2)・D1 削除・A2/A3 を contextual に調整。文言懸念(A1/B3/B4)、高度不足(B6/旧C2)、需要のずれ(C1)
-- 2026-07-17: v4 反映。registry へ 6 件の pending revision 提案(A1・B3・B4・C1需要・D2 change + Build with us 言い換え)
+- 2026-07-17: v4 反映。registry へ 8 件の pending revision 提案(A1・B3・B4・C1需要・D2 change + Build with us 言い換え + A0 想像を創造する new + A3 改訂)と link candidate 1 本(A1 realizes A0)。A0/A3 は kensaku 承認済み(「いいですね」)、他 6 件は review 待ち
 
 ## 撤退・変更条件
 - C1 需要の research で生の言葉・代替行動が取れなければ、切り方(実現したい状態)ごと再検討に戻る
