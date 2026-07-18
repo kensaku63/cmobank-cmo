@@ -19,6 +19,7 @@
 - 最初の 5 分の体験の中身 = 「実仕事がひとつ進み、成果が会社の資産として残る」(検証: research + prototype / 状態: 仮決め)
 
 ## 検証結果ログ
+- 2026-07-18: N=1 インタビュー(Asks 17 問)完了。全回答と読み取りは aachat-key-concept の research-raw-voices.md。5 大発見: (1) 需要の言葉は「鮮度(イメージが薄れる前に)と集中(認知コストを増やさない)」で、「人を増やさず」は本音でない (2) coordination pain の言葉は 17 問で一度も自発的に出ず、入口需要は「前進・実現」側の可能性大 (3) 資産の第一級は agent 自身。最初の 5 分 = agent を作る (4) A5 の主語は「事業化できなかった人たち」= 民主化。wedge は founder、vision は未創業者の二段構え (5) 断り文句は「覚えるのが大変そう」= 学習コストの見た目。A1 再出し方向は「ベネフィット or ユニークな示唆」。flagship story = 特許申請 agent(80 候補→先行調査→23 件文書化→ブラウザで申請完了)。虫の目候補 3 人: イングリッド黒川・icra 鴻上・とーる
 - 2026-07-13: registry 登録 14 件中 13 publish / 1 decline(Build with us、「共犯者」という言葉が理由)
 - 2026-07-14〜17: kensaku が concern 8 件・endorsement 1 件(B2)・D1 削除・A2/A3 を contextual に調整。文言懸念(A1/B3/B4)、高度不足(B6/旧C2)、需要のずれ(C1)
 - 2026-07-17: v4 反映。registry へ 8 件の pending revision 提案(A1・B3・B4・C1需要・D2 change + Build with us 言い換え + A0 想像を創造する new + A3 改訂)と link candidate 1 本(A1 realizes A0)。A0/A3 は kensaku 承認済み(「いいですね」)、他 6 件は review 待ち
