@@ -7,7 +7,9 @@
 - 未確認(kensaku から明示されていない)。dogfooding → community → 初期ユーザーの順で立ち上げる方針。
 
 ## 確定事項(意思決定済み)
-- キーコンセプトマップの正本: aachat-key-concept project の key-concepts.md(v4、2026-07-17)
+- キーコンセプトマップの正本: aachat-key-concept project の key-concepts.md(v5、2026-07-18)
+- v5 確定(kensaku 承認 2026-07-18): A1「Build your agentic company — 思いついた構想が、薄れる前に動き出す会社をつくる」/ C1 需要 = 鮮度と集中(第4案)/ D2 = 最初の5分で専門 agent が誕生し最初の仕事が動き出す(覚えることゼロ)。registry へ change revision 3 件 propose 済み(A1: d362a50f / C1: 556a287b / D2: c620f896)、publish 待ち
+- registry への propose は aachat-mcp への stdio JSON-RPC で可能(initialize → notifications/initialized → tools/call。helper パターンは検証済み)
 - 需要は「実現したい状態」で切る(決定 2026-07-10)
 - 戦略の背骨: B2「Agent work should become company assets」(registry 唯一の endorsement)、B1 カテゴリ創造、B5 dogfooding
 - キーコンセプトの高度基準: 事業判断を変えるものだけ。製品の手触り(同僚性・体験で分かる)は製品設計指針に降格(2026-07-17)
