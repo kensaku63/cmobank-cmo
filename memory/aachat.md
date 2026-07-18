@@ -27,6 +27,7 @@
 - C1 需要の research で生の言葉・代替行動が取れなければ、切り方(実現したい状態)ごと再検討に戻る
 
 ## 次回への申し送り
+- 2026-07-18: kensaku へのコンセプト深掘りインタビュー 17 問を Project Asks として登録済み(aachat-key-concept、原体験4・需要5・供給3・言葉3・体験2)。`chat ask list aachat-key-concept --status answered --mine` で回答を回収し、需要 research(N=1 の生の言葉)・A1 文言再出し・D2 具体化の入力にする
 - kensaku の publish / decline / A0 承認 / A1 文言選択を確認してから動く(chat inbox と registry reviews の両方を読む。concern は chat に流れないので registry を直接読むこと)
 - registry へは aachat-mcp に stdio JSON-RPC で直接アクセスできる(MCP tool としては未接続)
 - 次の実働は需要 research(research-method.md の手順、対象は kensaku 本人 N=1 と founder 言説)
