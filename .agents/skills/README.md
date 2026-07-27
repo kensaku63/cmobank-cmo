@@ -10,6 +10,7 @@
 - `product-concept`: 商品コンセプト、USP、オファーを作る
 - `lp-funnel`: LP とコミュニケーションファネルを設計・レビューする
 - `hypothesis-test`: センターピン、重要仮説、検証計画を作る
+- `build-marketing-summary`: マーケティングの文言・判断・根拠・思考過程を4段階の権威レベルに分け、壁打ちから正本化まで進める
 
 ## Quality Policy
 

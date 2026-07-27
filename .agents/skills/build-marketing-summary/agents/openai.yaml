@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Marketing Summary"
+  short_description: "マーケティング判断の正本を設計し、壁打ちで確定する"
+  default_prompt: "Use $build-marketing-summary to design and build a durable marketing summary."
