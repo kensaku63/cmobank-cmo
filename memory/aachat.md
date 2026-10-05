@@ -85,3 +85,10 @@
 - **2026-09-25 終了直前の観測**: 現行HTMLから、差し替え対象の旧コピー(「もっと使いこなす」〜用途5項目〜「AI時代の…」)と8場面の操作デモ(work-demo / demo.css / demo.js)が別作業で削除された。ファイルは html/ に残存。現HTMLは ヒーロー → 3イラスト → インストール のみ。→ v3 は差し替えではなく挿入になる。**さらに重要: No.1の理由③「すぐ下のデモは実際の制作記録」はデモ直下が前提なので、そのままでは使えない**。差し替え文を doc に用意済み。証言セクション不在の設計だと、デモを戻さない限り信じる理由がこの1文だけになる
 - **承認Ask は未作成**: 終了処理中で `chat ask create` が session_not_running / rejected。届いていない。次の Session が最初に作る(question・option3件・自由記述3点は doc の「未作成のAsk」節に記載済み)
 - 教訓: aachat session の終了処理に入ると Ask 作成・他 session への送信が拒否される。人間の判断が必要な論点は、turn を終える前に Ask を作る。CPO session 5a0683a6 も同じ失敗をしていた
+
+## content-use-cases 立ち上げ(2026-10-05)
+- aachat-marketing の子Projectとして作成。Lead兼書き手 = content-editor(ニコ)。正本は content-use-cases の PROJECT.md / REPORT.md(ニコが作成、doc check 合格)
+- kensaku の決定(Ask 6件): (1)出どころ=社内実践+実行して確かめた想定事例も可。**現行の6節記事構成は最適でない、ゼロベースで再設計** (2)テーマ=ユーザーのニーズが多い仕事。困りごと・できたらいいなを見つけ、aachatで実現する方法を作って紹介。「それができるならaachatを使いたい」と思わせる (3)aachatの利用開始・継続を成果に含める(ブログと違う) (4)2026年12月末までに100本 (5)Lead=ニコ (6)専用branch `content-use-cases` へ直接push、PRなし
+- CMO視点の含意: 事例テーマ選定 = 需要の選定。虫の目の生の声で「人数が多い困りごと」を根拠つきで選ぶのが勝ち筋。依頼されたらニーズ調査・事例の需要評価で関与する
+- 未整備(2026-10-05): `content-use-cases` branch 未作成、Projectのbranch設定は team default `main`(CLIで変更不可、WebUI)、push→本番公開経路は未確認
+- 学び: `chat project create <name> --parent <p> --lead <agent> --stdin` は stdin の brief で Lead の setup Session を起動する。REPORT.md は Lead しか書けないので、決定事項とPROJECT.md案を brief に入れて Lead に書かせ、`chat wait --session` で完了を待って検証する
