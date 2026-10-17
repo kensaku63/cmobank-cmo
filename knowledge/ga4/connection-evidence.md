@@ -11,3 +11,5 @@ Executed from cmobank-cmo.kensaku63 Session f5477d3e-973c-41c3-b8a8-c39784efabc9
 - No quota-project header used; no additional IAM grants. The current ADC has no quota_project_id. Credentials and tokens were never printed or committed.
 
 The Agent repository MCP configuration is separate evidence from runtime tool injection. Direct stdio execution in this Session is proven; the next Session's injected tool list is not yet verified. OS-level isolation from other Agents under the same macOS account is not achieved. MP validation, actual collection and general-user enablement were not executed.
+
+The saved installed mcp.json command/arguments were subsequently executed directly by read.py; official MCP property retrieval succeeded at 2026-10-17T03:53:39.742144+00:00. CLI checkCompatibility for eventName/eventCount also succeeded. Next-Session ACP injection remains unverified.

@@ -34,7 +34,10 @@ async def mcp_read(tool, arguments):
     from mcp import ClientSession, StdioServerParameters
     from mcp.client.stdio import stdio_client
     # This is the official server, unmodified; no private replacement MCP.
-    params = StdioServerParameters(command='uvx', args=['--from', f'git+https://github.com/googleanalytics/google-analytics-mcp.git@{PIN}', 'analytics-mcp'], env=environment())
+    config = json.loads((ROOT.parents[1] / '.agents/plugins/ga4-reader/mcp.json').read_text())['mcpServers']['ga4-reader']
+    if PIN not in ' '.join(config['args']):
+        raise ReadFailure('MCP configuration pin differs from verified reader')
+    params = StdioServerParameters(command=config['command'], args=config['args'], env=environment())
     async with stdio_client(params) as (reader, writer):
         async with ClientSession(reader, writer) as session:
             await session.initialize()
