@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ga4-reader": {
+      "command": "sh",
+      "args": ["-c", "unset GOOGLE_CLOUD_QUOTA_PROJECT; export GOOGLE_APPLICATION_CREDENTIALS=\"${GOOGLE_APPLICATION_CREDENTIALS:-$HOME/.config/aachat-ga-reader/application_default_credentials.json}\"; exec uvx --from 'git+https://github.com/googleanalytics/google-analytics-mcp.git@75c0e1be8322e5eaa5c2e3ef7e79cf4760060f9a' analytics-mcp"]
+    }
+  }
+}
