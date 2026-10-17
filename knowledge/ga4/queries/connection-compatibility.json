@@ -1,0 +1,12 @@
+{
+  "dimensions": [
+    {
+      "name": "eventName"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "eventCount"
+    }
+  ]
+}

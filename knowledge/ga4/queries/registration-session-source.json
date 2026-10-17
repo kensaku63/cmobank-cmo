@@ -1,0 +1,57 @@
+{
+  "date_ranges": [
+    {
+      "start_date": "2026-09-17",
+      "end_date": "2026-10-14"
+    }
+  ],
+  "dimensions": [
+    "sessionSourceMedium"
+  ],
+  "metrics": [
+    "eventCount"
+  ],
+  "dimension_filter": {
+    "and_group": {
+      "expressions": [
+        {
+          "filter": {
+            "field_name": "eventName",
+            "string_filter": {
+              "match_type": "EXACT",
+              "value": "sign_up"
+            }
+          }
+        },
+        {
+          "filter": {
+            "field_name": "customEvent:surface",
+            "string_filter": {
+              "match_type": "EXACT",
+              "value": "web"
+            }
+          }
+        },
+        {
+          "filter": {
+            "field_name": "customEvent:measurement_version",
+            "string_filter": {
+              "match_type": "EXACT",
+              "value": "v1"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "return_property_quota": true,
+  "limit": 10000,
+  "offset": 0,
+  "order_bys": [
+    {
+      "dimension": {
+        "dimension_name": "sessionSourceMedium"
+      }
+    }
+  ]
+}

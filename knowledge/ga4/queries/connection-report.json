@@ -1,0 +1,24 @@
+{
+  "date_ranges": [
+    {
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-16"
+    }
+  ],
+  "dimensions": [
+    "eventName"
+  ],
+  "metrics": [
+    "eventCount"
+  ],
+  "order_bys": [
+    {
+      "dimension": {
+        "dimension_name": "eventName"
+      }
+    }
+  ],
+  "limit": 10000,
+  "offset": 0,
+  "return_property_quota": true
+}

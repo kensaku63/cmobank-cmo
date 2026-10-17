@@ -4,3 +4,6 @@
 *.key
 credentials.json
 secrets.*
+
+__pycache__/
+*.pyc

@@ -63,3 +63,7 @@ CMOBANK の考え方は、思考の邪魔にならない軽い方向付けとし
 secret、token、JWT、PAT、秘密鍵は repo に含めません。
 
 この agent の提案はすべて暫定仮説です。最終判断は、市場テスト・顧客インタビュー・実データで検証してください。
+
+## aachat GA4分析
+
+aachatのWebアクセス・登録・直接依頼・閲覧を分析するときは [GA4 RUNBOOK](knowledge/ga4/RUNBOOK.md) と [指標辞書](knowledge/ga4/measurement-plan.md) を参照する。通常取得は公式MCP、7日条件付きファネルは同ディレクトリの読取CLI。Agent専用設定とOSアクセス隔離は別であり、現在のMacでは後者は未達。

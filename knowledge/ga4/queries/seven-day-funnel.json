@@ -1,0 +1,80 @@
+{
+  "dateRanges": [
+    {
+      "startDate": "2026-09-17",
+      "endDate": "2026-10-14"
+    }
+  ],
+  "funnel": {
+    "isOpenFunnel": false,
+    "steps": [
+      {
+        "filterExpression": {
+          "funnelEventFilter": {
+            "eventName": "human_request_accepted",
+            "funnelParameterFilterExpression": {
+              "andGroup": {
+                "expressions": [
+                  {
+                    "funnelParameterFilter": {
+                      "eventParameterName": "surface",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "web"
+                      }
+                    }
+                  },
+                  {
+                    "funnelParameterFilter": {
+                      "eventParameterName": "measurement_version",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "v1"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "name": "First accepted request"
+      },
+      {
+        "filterExpression": {
+          "funnelEventFilter": {
+            "eventName": "human_request_accepted",
+            "funnelParameterFilterExpression": {
+              "andGroup": {
+                "expressions": [
+                  {
+                    "funnelParameterFilter": {
+                      "eventParameterName": "surface",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "web"
+                      }
+                    }
+                  },
+                  {
+                    "funnelParameterFilter": {
+                      "eventParameterName": "measurement_version",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "v1"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "name": "Second within seven days",
+        "isDirectlyFollowedBy": false,
+        "withinDurationFromPriorStep": "604800s"
+      }
+    ]
+  },
+  "returnPropertyQuota": true
+}

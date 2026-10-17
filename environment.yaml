@@ -1,7 +1,10 @@
 name: default
 description: "CMOBANK CMO strategy agent"
 config:
-  packages: {}
+  packages:
+    brew: [uv]
   networking:
     type: unrestricted
-  env: []
+  env:
+    - name: GOOGLE_APPLICATION_CREDENTIALS
+      purpose: Local impersonated ADC path for this Agent GA read-only tools
