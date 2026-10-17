@@ -46,46 +46,17 @@ aachat session run cmobank-cmo --project <project> "この事業の CMO 提案�
 - 現在の集客・販売方法
 - 困っていること
 
-## 主な出力
-
-```text
-1. 現状の一文分解
-2. コアコンピタンス仮説
-3. 青い需要候補
-4. 狙う需要
-5. No.1 を取れる理由
-6. 商品コンセプト
-7. USP / オファー
-8. LP / コミュニケーションファネル
-9. センターピン
-10. 重要仮説と検証計画
-11. 撤退・変更条件
-12. 社長向け提案文
-```
-
 ## 構成
 
-- `identity.md`: エージェントの人格・役割・判断基準の正本
-- `environment.yaml`: 必要な実行環境
-- `knowledge/`: CMOBANK マーケティングの実務正本
-  - `cmobank-principles.md`: 原則(需要・供給・コミュニケーション、青い需要、4 つのゲート)
-  - `cmo-workflow.md`: 17 ステップのワークフロー(リサーチ → 需要 → コンセプト → セールス → 検証)
-  - `research-method.md`: 鳥の目・虫の目・魚の目のリサーチ手順と実調査の方法
-  - `persona-empathy.md`: ペルソナ脳内マップと憑依の手順
-  - `sales-offer.md`: セールス 4 点セット、オファー 4 要素、クロージング、3 つの Not
-  - `quality-gates.md`: 各工程の進出条件と差し戻し先
-  - `review-checklist.md`: 出力直前のセルフ監査
-  - `examples.md`: 良い例・悪い例の対比集
-  - `output-templates.md` / `anti-patterns.md` / `glossary.md`
-- `cmobank-book/`: CMOBANK マーケティングノウハウ本。`knowledge/` より深い章単位の背景理解・用語定義・思考プロセスの参照先
+- `identity.md`: 役割と CMOBANK 思想の核(数行)。普段はこれだけで動く
+- `.agents/skills/`: 業務ごとに CMOBANK の考え方を注入する skill。リサーチ・需要選定・コンセプト・セールス・LP・検証・全体提案・正本文書づくり(一覧は `.agents/skills/README.md`)
 - `memory/`: session 間で引き継ぐ事業ステート(形式は `memory/README.md`)
-- `.agents/skills/`: 実行時に使う専用 skill(persona-research / cmo-strategy / demand-research / product-concept / lp-funnel / hypothesis-test)
+- `cmobank-book/`: skill の蒸留元になった CMOBANK ノウハウ本の原典。実行時には参照しない
+- `environment.yaml`: 実行環境
 
-## 知識の読み方
+## 設計方針
 
-この agent は、依頼対応時にまず `knowledge/` を必ず読みます。`cmobank-book/` は、`knowledge/` だけでは判断が浅くなるとき、用語の厳密な定義や章単位の背景を確認するために参照します。
-
-各工程は `knowledge/quality-gates.md` のゲートを通らなければ次へ進めず、出力前には `knowledge/review-checklist.md` のセルフ監査を必ず行います。
+CMOBANK の考え方は、思考の邪魔にならない軽い方向付けとして使う。identity には核だけを置き、業務に入ったときだけ該当 skill でその業務のエッセンスを足す。skill にもフレームワークの全文やチェックリストは載せず、判断を変える考え方だけを書く。
 
 ## 注意
 

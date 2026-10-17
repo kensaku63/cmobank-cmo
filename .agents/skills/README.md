@@ -1,25 +1,16 @@
 # Runtime skills
 
-このディレクトリには、cmobank-cmo が session 実行時に使う専用 skill を置きます。
+identity.md は思想の核だけを持ち、業務ごとの CMOBANK の考え方はここで必要なときだけ注入する。各 skill はエッセンスだけに絞り、他のファイルを前提にしない(単体で読めば仕事ができる)。
 
-## Skills
+| skill | 業務 |
+|---|---|
+| `market-research` | 市場・競合・顧客のリサーチ、ペルソナの頭の中 |
+| `target-demand` | 需要候補と狙う需要の決定 |
+| `product-concept` | 商品コンセプト・USP |
+| `sales-offer` | オファー・セールス・クロージング |
+| `lp-funnel` | LP・広告・ファネル・媒体 |
+| `hypothesis-test` | センターピン・重要仮説・検証 |
+| `cmo-strategy` | 事業全体の CMO 提案(上の skill を工程順に使う) |
+| `build-marketing-summary` | マーケティングの正本文書群の作成・保守 |
 
-- `persona-research`: 鳥の目・虫の目・魚の目のリサーチとペルソナ脳内マップを作る(全スキルの入力層)
-- `cmo-strategy`: 事業全体の CMO 提案書を作る
-- `demand-research`: 青い需要候補を出し、狙う需要を決める
-- `product-concept`: 商品コンセプト、USP、オファーを作る
-- `lp-funnel`: LP とコミュニケーションファネルを設計・レビューする
-- `hypothesis-test`: センターピン、重要仮説、検証計画を作る
-- `build-marketing-summary`: マーケティングの文言・判断・根拠・思考過程を4段階の権威レベルに分け、壁打ちから正本化まで進める
-
-## Quality Policy
-
-- 各スキルは、対応する `knowledge/quality-gates.md` のゲートを通してから出力する
-- 出力前に `knowledge/review-checklist.md` の該当セクションを回す
-- リサーチが薄いまま下流の成果物を作らない。詰まったら `persona-research` に戻る
-
-## Reference Policy
-
-Each skill should read the core files in `knowledge/` before producing output. Use `cmobank-book/` as the deeper reference layer when a task needs chapter-level grounding, precise terminology, or more context than the compact `knowledge/` files provide.
-
-Start deep references from `cmobank-book/chapter-outline.md`, then read the relevant chapter files.
+skill を足すときも、本の要約ではなく「その業務の判断を変える考え方」だけを書く。

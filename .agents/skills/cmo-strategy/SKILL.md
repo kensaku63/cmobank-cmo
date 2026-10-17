@@ -1,103 +1,30 @@
+---
+name: cmo-strategy
+description: 事業全体のマーケティング戦略・CMO 提案書・成長戦略・新規事業の方向性をまとめるときに使う。「マーケ戦略を考えて」「CMO 提案」「この事業どう伸ばす」「社長向けの提案」などの依頼で起動する。個別の工程だけの依頼なら、該当する工程の skill を使う。
+---
+
 # CMO Strategy
 
-Use this skill when the user asks for a marketing strategy, CMO proposal, business growth plan, new business direction, market choice, or "どの需要で No.1 を取るか".
+「この事業は、どの需要で No.1 を取り、そこへどう至るか」に一本筋の通った答えを出す。
 
-## Goal
+## 流れ
 
-Produce a CMO-level proposal that answers:
+各工程に入るときに、対応する skill を読む。行き詰まったら前の工程に戻る。戻るのは後退ではない。
 
-> この事業は、どの需要で No.1 を取り、そこへどう至るか。
+1. 現在地を一文にする: 「今この事業は、〔どの需要〕に、〔どんな供給〕を当て、〔どんなコミュニケーション〕で取引を成立させている」。ビジネスゴールも置く(不明なら仮置き)
+2. 調べる → `market-research`。依頼者の資料だけで書き切らない
+3. 狙う需要を 1 つ決める → `target-demand`
+4. 商品コンセプトと USP → `product-concept`
+5. オファーと買う理由 → `sales-offer`
+6. LP・ファネル → `lp-funnel`
+7. センターピン・重要仮説・検証 → `hypothesis-test`
 
-## Required Knowledge
+依頼の重心がどこにあるかを見て、必要な工程だけ厚くする。全工程を同じ厚さで埋めなくていい。
 
-Before producing output, always read the core knowledge files:
+## 締め方
 
-- `knowledge/cmobank-principles.md`
-- `knowledge/cmo-workflow.md`
-- `knowledge/quality-gates.md`
-- `knowledge/output-templates.md`
-- `knowledge/anti-patterns.md`
-- `knowledge/review-checklist.md`
-- `knowledge/examples.md`
-- `knowledge/glossary.md`
+SWOT や 3C、事実の整理で終わらせない。確信の言葉で一つの方向を推す。
 
-Read when the corresponding stage is reached:
+> この需要は大きく青く、我々の〔コア〕を使えば選ばれる理由がある。だから〔狙う需要〕で No.1 を取りにいくべきです。まず〔センターピン〕に集中し、〔重要仮説〕を最速で検証しましょう。
 
-- Research stage: `knowledge/research-method.md`, `knowledge/persona-empathy.md`
-- Sales / offer stage: `knowledge/sales-offer.md`
-
-For deeper grounding, read `cmobank-book/chapter-outline.md` first, then use the relevant book chapters:
-
-- Overall marketing structure: `cmobank-book/00-prologue.md`, `cmobank-book/01-business-demand-supply-trade.md`, `cmobank-book/03-three-questions.md`
-- Demand selection: `cmobank-book/06-blue-demand-target-demand.md`
-- CMO proposal, center pin, and validation: `cmobank-book/12-cmo-work.md`, `cmobank-book/13-epilogue.md`
-- Precise terms: `cmobank-book/GLOSSARY.md`
-
-## Inputs To Gather
-
-Ask for missing inputs only when they block the work. Otherwise, state assumptions and proceed.
-
-- Business overview
-- Business goal
-- Product / service
-- Current customers
-- Current sales or traction
-- Existing marketing / sales channels
-- Competitors
-- Known strengths
-- Constraints
-
-## Procedure
-
-Follow `knowledge/cmo-workflow.md` (steps 0-17). The outline:
-
-1. Check `memory/` for this business and resume from prior decisions and open hypotheses.
-2. Write the current-state sentence:
-
-   ```text
-   今この事業は、〔どの需要〕に、〔どんな供給〕を当て、〔どんなコミュニケーション〕で取引を成立させている。
-   ```
-
-3. Define or infer the business goal.
-4. Research (鳥の目・虫の目・魚の目) per `knowledge/research-method.md`, then build the persona mind map per `knowledge/persona-empathy.md`. Do not write the proposal from the client's brief alone. Pass gates 0-1.
-5. Create the core competence hypothesis from observed results.
-6. Use the core as the flag and list demand candidates with the net theory.
-7. Evaluate candidates as blue demands:
-   - competition
-   - number of buyers
-   - willingness to pay
-   - No.1 possibility
-   - core fit
-   - future expansion
-   - communicability
-8. Choose one target demand. Pass the 4 gates with their 合格条件 (observed / calculated, not hoped). Pass gate 2.
-9. Explain why this demand, not the other candidates.
-10. Create the product concept (gates 3-4, including the 1.5 メートル check).
-11. Translate it into USP, offer, and the sales 4 点セット per `knowledge/sales-offer.md` (gate 5).
-12. Sketch LP / communication flow (gate 6: 教育 / 約束の分離, 3 つの Not).
-13. Identify the center pin.
-14. Identify the critical hypothesis and fastest validation.
-15. Define stop / change conditions.
-16. Self-audit with `knowledge/review-checklist.md`, then update `memory/`.
-17. End with a CEO-facing proposal sentence.
-
-## Output Format
-
-Use the `CMO 提案書` template in `knowledge/output-templates.md`.
-
-Keep the final recommendation clear:
-
-```text
-我々は、〔狙う需要〕で No.1 を取りにいくべきです。
-```
-
-## Guardrails
-
-- Do not skip the research stage. A proposal built only on the client's brief is a summary, not a strategy.
-- Do not output before passing `knowledge/review-checklist.md`.
-- Do not stop at SWOT, 3C, or financial summary.
-- Do not segment by age, gender, media, or product format unless translating them into demand.
-- Do not propose multiple target demands as equal priorities.
-- Do not start from LP copy, ads, or media before defining target demand and concept.
-- Always separate fact, interpretation, and hypothesis.
-- Always include validation, because the proposal is a provisional answer.
+確信の言葉で言っても、それは市場で検証する暫定解として扱う。決まったことは `memory/<事業>.md` に残す。

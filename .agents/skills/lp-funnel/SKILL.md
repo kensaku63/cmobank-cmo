@@ -1,133 +1,30 @@
-# LP Funnel
+---
+name: lp-funnel
+description: LP・セールスページ・広告・コンテンツ・ファネル・媒体選定・CRM 導線を設計またはレビューするときに使う。「LP」「ランディングページ」「サイト構成」「広告クリエイティブ」「ファネル」「どの媒体で」「CVR 改善」などの依頼で起動する。
+---
 
-Use this skill when the user asks for LP structure, sales page review, communication funnel, ad-to-LP flow, media strategy, or CRM flow.
+# LP & Funnel
 
-## Goal
+コミュニケーションは、相手の頭の中を MOA(「今だ、これだ」と行動する瞬間の状態)へ近づける情報設計。LP は商品説明の場ではない。
 
-Design or review communication that moves the prospect's brain state from MOL to MOA and then into a full funnel.
+## 考え方
 
-## Required Knowledge
+- 先に MOA を決める: 行動の瞬間に頭の中にある決め手 1〜2 個。見る前の状態(知っていること・疑っていること)との差分を埋めるのが LP の仕事
+- 狙う需要が一文で言えないなら、LP をいじっても直らない。上流を仮置きしてから入る
+- LP の 6 要素
+  1. FV / ビッグアイデア: 供給側の事情を忘れて、ペルソナが無視できない感情シーンで入る
+  2. 共感: 痛みと願望を再生する
+  3. 教育: 選ぶモノサシを渡す(自社が最高点になるモノサシ)。ここで商品の話はしない
+  4. 約束: ベネフィット → 特徴・効果 → 証拠
+  5. 交渉: オファーと後押し(`sales-offer`)
+  6. 提示: 手に入れた後の理想のシーン
+- 3 つの Not を全部崩す
+  - 読まない → 自分ごとになる入口。煽りで釣ると次で信じてもらえない
+  - 信じない → 固有名詞・数字・体験談の証拠
+  - 行動しない → 今やる理由 + 迷わない導線 + 後押し
+- ファネルは「リーチ → 見込み客化・初回購入 → CRM で LTV」の全体で見る。LTV ÷ CPA > 1 か
+- 媒体の価値 = 人数 × 時間 × 姿勢。人数だけで選ばない
 
-Before producing output, always read the core knowledge files:
+## 出力
 
-- `knowledge/cmobank-principles.md`
-- `knowledge/cmo-workflow.md`
-- `knowledge/sales-offer.md`
-- `knowledge/quality-gates.md`
-- `knowledge/output-templates.md`
-- `knowledge/anti-patterns.md`
-- `knowledge/examples.md`
-- `knowledge/glossary.md`
-
-For deeper grounding, read `cmobank-book/chapter-outline.md` first, then use the relevant book chapters:
-
-- Desire and communication-side thinking: `cmobank-book/02-desire-to-demand.md`
-- Sales and offer: `cmobank-book/09-sales-and-offer.md`
-- Brain-state, MOA, and content: `cmobank-book/10-information-space-content.md`
-- LP and communication funnel: `cmobank-book/11-lp-communication-funnel.md`
-- Precise terms: `cmobank-book/GLOSSARY.md`
-
-## Inputs
-
-- Target demand
-- Product concept
-- USP / offer
-- Existing LP or draft, if any
-- Desired action
-- Media or traffic source
-- Current funnel metrics, if any
-
-If target demand or product concept is missing, note that LP / funnel design is downstream and define assumptions before proceeding.
-
-## Procedure
-
-1. Define the desired action.
-2. Define MOA:
-
-   ```text
-   見込み客が「今だ、これだ」と行動する瞬間、脳内に流れている決め手は〔1〜2 個〕である。
-   ```
-
-3. Define MOL:
-   - what the prospect knows before seeing the creative
-   - what they believe
-   - what they doubt
-   - what they want now
-4. Design the LP / sales communication using:
-   - FV / big idea (forget the supply side; design the entrance the persona cannot ignore, as a concrete emotional scene)
-   - empathy
-   - education
-   - promise (benefit first, then 特徴・効果, then 証拠; check 1.5 メートル)
-   - negotiation (sales 4 点セット + 厚いオファー + closing: list the likely 断る理由 and refute each, then push emotionally; place a P.S. after the offer)
-   - presentation
-5. Separate education and promise:
-   - education gives the measuring stick
-   - promise explains the product after demand is created
-6. Audit against the 3 Nots (`knowledge/sales-offer.md`): an entrance that makes them read, concrete proof that makes them believe, a reason-to-act-now plus simple path that makes them act.
-7. Build the funnel:
-   - reach
-   - lead / first purchase
-   - CRM / repeat / cross-sell
-8. Evaluate media by:
-   - number of people
-   - time / attention
-   - viewing posture
-   - mechanics
-   - competition
-9. Identify the bottleneck:
-   - Not Read
-   - Not Believe
-   - Not Act
-   - weak offer
-   - weak proof
-   - wrong media posture
-   - missing CRM / LTV
-10. Run gate 6 in `knowledge/quality-gates.md` and section D of `knowledge/review-checklist.md` before output.
-
-## Output Format
-
-```text
-## MOA
-〔行動する瞬間の脳内情報空間〕
-
-## MOL
-〔見る前の状態〕
-
-## LP 構成
-| 要素 | 役割 | 入れる情報 |
-|---|---|---|
-| FV | 触手を捕まえる |  |
-| 共感 | 欲求・痛み |  |
-| 教育 | モノサシ |  |
-| 約束 | 商品説明 |  |
-| 交渉 | オファー |  |
-| 提示 | 理想 |  |
-
-## 教育と約束の分離
-- 教育で渡すモノサシ:
-- 約束で示すベネフィット:
-- それを信じさせる証拠:
-
-## ファネル
-リーチ → 見込み客獲得 → CRM:
-〔動線〕
-
-## 媒体評価
-| 媒体 | 人数 | 時間 | 姿勢 | 仕組み | 競合 | 判定 |
-|---|---|---|---|---|---|---|
-
-## 改善優先順位
-1. 〔最優先〕
-2. 〔次点〕
-3. 〔余力があれば〕
-```
-
-## Guardrails
-
-- Do not treat an LP as a product brochure.
-- Do not start from design or copy before MOA.
-- Do not put product explanation in the education section.
-- Do not choose media only by audience size. Media value = 人数 × 時間 × 姿勢.
-- Do not confuse one-page LP structure with the full communication funnel.
-- Do not fix a weak LP downstream when the upstream is unset. If the target demand cannot be stated in one sentence or has not passed the 4 gates, stop and go upstream first.
-- Do not crowd the moment of decision. The MOA is 1-2 decisive items; place 買う理由 (justification material) beside it, not on top of it.
+MOA、LP 構成(各要素の役割と中身)、教育と約束で渡すもの、ファネルと媒体、最優先で直すボトルネック 1 つとその一手。
