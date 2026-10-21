@@ -23,6 +23,23 @@ class ReadFailure(Exception):
     pass
 
 
+def checked_mcp_result(result):
+    if result.get('isError'):
+        raise ReadFailure('MCP tool failed (not a zero result)')
+    payloads = [result.get('structuredContent')]
+    for block in result.get('content', []):
+        if block.get('type') == 'text':
+            try:
+                payloads.append(json.loads(block['text']))
+            except (KeyError, json.JSONDecodeError):
+                continue
+    # The official server can return {"error": ...} with isError=false.
+    # Never echo its text: authentication errors can contain sensitive URLs.
+    if any(isinstance(payload, dict) and 'error' in payload for payload in payloads):
+        raise ReadFailure('MCP content reported an error (not a zero result)')
+    return result
+
+
 def environment():
     env = dict(os.environ)
     env.pop('GOOGLE_CLOUD_QUOTA_PROJECT', None)
@@ -42,9 +59,7 @@ async def mcp_read(tool, arguments):
         async with ClientSession(reader, writer) as session:
             await session.initialize()
             result = await session.call_tool(tool, arguments)
-            if result.isError:
-                raise ReadFailure('MCP tool failed (not a zero result)')
-            return result.model_dump(mode='json', exclude_none=True)
+    return checked_mcp_result(result.model_dump(mode='json', exclude_none=True))
 
 
 def rest_read(method, body):

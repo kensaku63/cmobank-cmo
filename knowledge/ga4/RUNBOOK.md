@@ -17,9 +17,21 @@ uv run read.py funnel --request queries/seven-day-funnel.json
 
 Property is fixed in the reader; do not select the first account search result. Normal reports use official MCP `run_report`, not a replacement MCP. The pinned MCP does not preserve the funnel time constraint, so funnels use Data API REST. REST preserves response fields unknown to an SDK; the exact request is echoed with the result for comparison. A successful HTTP request with empty rows is a connection check, not instrumentation acceptance. `failed` exits nonzero with null data. No unbounded retries occur.
 
+Both MCP `isError=true` and a top-level `error` in any JSON text content or structuredContent fail closed with exit 1, empty stdout and `status=failed,data=null` on stderr. The official server's observed 503 reauthentication failure uses `isError=false` with JSON text `error`; exit 0 from older reader versions was not evidence of success. Raw upstream error text is not echoed. Successful empty rows remain unchanged and must not be confused with a failed read. Offline regression from the Agent repository root: `python3 -m unittest discover -s knowledge/ga4 -p test_read.py -v`.
+
 The helper unsets GOOGLE_CLOUD_QUOTA_PROJECT and REST uses credentials.with_quota_project(None). The provided ADC has no quota project. This matches the successful service-account authentication path: an explicit x-goog-user-project previously caused USER_PROJECT_DENIED. Do not grant serviceusage.services.use merely to work around a header the configuration does not require. If an explicit quota project becomes necessary, obtain authorization and validate that separate permission. Do not edit shared gcloud settings or the ADC.
 
 If human ADC renewal is needed, use gcloud auth application-default login with impersonation and analytics.readonly/cloud-platform scopes, **without the ACCOUNT positional argument**; the human chooses kensaku@aachat.io in the browser. gcloud 589.0.0 failed ID-token verification when ACCOUNT was supplied. Preserve the private credential location and do not ask for the MP secret.
+
+The human runs the following on the reader Mac and completes browser login/consent; ask only for completion status, never an authorization code, URL, token or credential content. `CLOUDSDK_CONFIG` is command-local, so the shared gcloud configuration is unchanged. Do not replace the service account with the human's direct GA access or add edit scope.
+
+```sh
+(umask 077
+ env -u GOOGLE_APPLICATION_CREDENTIALS -u GOOGLE_CLOUD_QUOTA_PROJECT CLOUDSDK_CONFIG="$HOME/.config/aachat-ga-reader" gcloud auth application-default login --impersonate-service-account=aachat-analytics-reader@trim-mile-511903-c8.iam.gserviceaccount.com --scopes=https://www.googleapis.com/auth/analytics.readonly,https://www.googleapis.com/auth/cloud-platform --disable-quota-project
+)
+```
+
+After renewal, verify the impersonated service-account identity, ADC mode 0600 and absence of quota project without printing credentials. Re-read property (Asia/Tokyo), dimensions and metadata before reports. Browser login completion alone is not reader recovery. Current collection dates, excluded days and the recovery evidence belong to the Project's `ga4-operations.md` and `ga4-reader-recovery-20261021.md`; do not infer current availability from historical connection evidence.
 
 Before regular analysis:
 
