@@ -1,0 +1,76 @@
+{
+  "date_ranges": [
+    {
+      "start_date": "2026-10-21",
+      "end_date": "2026-10-21"
+    }
+  ],
+  "dimensions": [
+    "customEvent:first_observed_request"
+  ],
+  "metrics": [
+    "eventCount",
+    "totalUsers"
+  ],
+  "dimension_filter": {
+    "and_group": {
+      "expressions": [
+        {
+          "filter": {
+            "field_name": "eventName",
+            "string_filter": {
+              "match_type": "EXACT",
+              "value": "human_request_accepted"
+            }
+          }
+        },
+        {
+          "filter": {
+            "field_name": "customEvent:surface",
+            "string_filter": {
+              "match_type": "EXACT",
+              "value": "web"
+            }
+          }
+        },
+        {
+          "filter": {
+            "field_name": "customEvent:measurement_version",
+            "string_filter": {
+              "match_type": "EXACT",
+              "value": "v1"
+            }
+          }
+        },
+        {
+          "filter": {
+            "field_name": "dateHourMinute",
+            "in_list_filter": {
+              "values": [
+                "202610211920",
+                "202610211921",
+                "202610211922",
+                "202610211923",
+                "202610211924",
+                "202610211925",
+                "202610211926",
+                "202610211927",
+                "202610211928"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "return_property_quota": true,
+  "limit": 10000,
+  "offset": 0,
+  "order_bys": [
+    {
+      "dimension": {
+        "dimension_name": "customEvent:first_observed_request"
+      }
+    }
+  ]
+}
