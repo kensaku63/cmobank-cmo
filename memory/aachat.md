@@ -125,3 +125,8 @@
 - GA4: 10/24 の正式初回取得は reader 再認証が前提。人間の操作が済んだか確認してから取る。
 - リサーチの教訓: 並列 6 本の研究 subagent は孫 agent を生み、WebSearch の Session 予算 200 回を数分で使い切り、利用上限(429)で全滅した。raw 取得物は /tmp/aachat-cmo-research-20261022/ に残るので親が自分で抽出できる。次は subagent 2〜3 本に絞り、WebSearch を使う本数を指定し、WebFetch/jina/GitHub API を主にする。
 - 英語圏の生の声・利用者数の一次値・国内「AI社員」SaaS の価格は未収集。第 7 節の仮定を差し替える材料。
+
+## 重要指標ダッシュボード(2026-10-22 実装、Session 44705a3f)
+- 確定: 日常利用目標の主指標は「社外DAU」= 全クライアントでその日に1回以上直接依頼した社外の人間アカウント(製品DB日次集計P02、aachatチームmemberを社内として除外)。GAは同意したWebだけなので集客・Web導線の内訳に使う。根拠と定義は Project docs/analytics-database-dashboard-spec.md 3.4節。
+- 仕組み: Trigger 6318bf8b(毎日09:00 JST)→ knowledge/ga4/dashboard_sync.py run → Project DB → html/index.html(DB直読、メンバー限定)。GA正式値の初回は2026-10-24(10/21分)、製品集計は kensaku63/aachat PR #2115 merge後。
+- 申し送り: GA読取ADCは約1日で失効した。本人は2026-10-22にセッション制御延長(A)を選択、設定完了は未確認。数字が溜まったら(7日窓は10/30〜)流入元×入口と社外DAUの推移から最初の打ち手仮説を出す。
