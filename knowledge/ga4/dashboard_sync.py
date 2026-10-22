@@ -601,10 +601,10 @@ def growth_results(raw, evidence):
 # ---------------------------------------------------------------- storage
 
 def period_state(task, today):
-    excluded = set(DEFINITIONS['excluded_dates'])
-    if any(d.isoformat() in excluded for d in days(task.start, task.end)):
-        return 'validation'
     if task.report['source'].startswith('ga4'):
+        excluded = set(DEFINITIONS['excluded_dates'])  # GA validation days only
+        if any(d.isoformat() in excluded for d in days(task.start, task.end)):
+            return 'validation'
         return 'eligible' if task.end <= today - dt.timedelta(days=DEFINITIONS['ga_delay_days']) else 'provisional'
     return 'eligible' if task.observed_through < today else 'provisional'
 
