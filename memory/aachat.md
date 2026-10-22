@@ -3,7 +3,7 @@
 ## 現在地の一文分解(最終更新: 2026-10-22)
 今この事業は、「いつもの Codex・Claude Code をもっと活かしたい人」に、マルチエージェントハーネス aachat(無料・Mac アプリ+CLI・自分のマシンで動く・Agent は GitHub repo)を当て、「あなたの Codex・Claude Code がもっとおもしろくなる」という LP、日本語ブログ 135 本、活用事例 2 本、X(フォロワー 29)で取引(インストールと最初の依頼)を成立させようとしている。成立数は未測定(GA4 正式集計は 2026-10-21 開始、DB 人数は未集計)。kensaku 2026-08-21「一般のユーザーはいない」。
 
-2026-10-22 の CMO 提案(status: proposed、Ask 採否待ち): 狙う需要 = 「Claude Code / Codex を使いひとりで事業を回す人が、自分のマシンの中に AI社員の会社を持ち、自分は判断と承認だけにしたい」。センターピン = 「aachat 社で働く社員と部署を Discover に公開し、複製したら 5 分で動く会社にする」。正本: aachat-marketing docs/cmo-strategy-20261022.md、材料: docs/research-agentic-company-demand-20261022.md。
+2026-10-22 の CMO 提案(status: on_hold。kensaku 回答「とてもいい案だが、一旦、保留」2026-10-22): 狙う需要 = 「Claude Code / Codex を使いひとりで事業を回す人が、自分のマシンの中に AI社員の会社を持ち、自分は判断と承認だけにしたい」。センターピン = 「aachat 社で働く社員と部署を Discover に公開し、複製したら 5 分で動く会社にする」。正本: aachat-marketing docs/cmo-strategy-20261022.md、材料: docs/research-agentic-company-demand-20261022.md。
 ## ビジネスゴール
 - 未確認(kensaku から明示されていない)。dogfooding → community → 初期ユーザーの順で立ち上げる方針。
 
@@ -117,8 +117,11 @@
 - 12 月 1 万人は計算上届かない(訪問 83 万が必要、現状は二桁以上の差)。先行指標 3 つ(社外毎日利用 100 人 / 複製 500 / 7 日内再依頼 30%)への置き換えを提案。採否は kensaku。
 - 製品への申し送り: 複製→動くまでの手数、PC を閉じても回る経路(headless 手順 or 常駐)、自作フォルダ(CLAUDE.md/AGENTS.md の AI社員一式)の取り込み、複製→初依頼→再依頼の漏斗計測。
 
+### 検証結果ログ(続き)
+- 2026-10-22 04:00 UTC: Ask a6a680f4 に kensaku が「保留(とてもいい案だが、一旦、保留)」と回答。退けたのは着手時期で、需要の切り方・目的ではない。12 月判定指標の置き換え、Discover 公開範囲も未決。検証・公開・LP 差し替えは一切着手していない。
+
 ### 次回への申し送り
-- まず Ask(CMO 戦略の採否、Project aachat-marketing、2026-10-22 作成)の回答を `chat ask show` で読む。採用なら: Discover 公開の実務(discover-prepare-agent / -template skill、identity・skill・knowledge のみ、memory・secret 除外)→ LP FV 案を kensaku の言葉の好みで 3 案 → 自作者 20 人リスト(research doc の表が起点)→ 計測定義を analytics-redesign へ追加。却下なら: 自由記述の方向で需要の切り方を出し直す。
+- 戦略は保留中。人間の新たな依頼があるまで、Discover 公開・LP 差し替え・自作者への返信を自分から始めない。再開の依頼が来たら: Discover 公開の実務(discover-prepare-agent / -template skill、identity・skill・knowledge のみ、memory・secret 除外)→ LP FV 案を kensaku の言葉の好みで 3 案 → 自作者 20 人リスト(research doc の表が起点)→ 計測定義を analytics-redesign へ追加。却下なら: 自由記述の方向で需要の切り方を出し直す。
 - GA4: 10/24 の正式初回取得は reader 再認証が前提。人間の操作が済んだか確認してから取る。
 - リサーチの教訓: 並列 6 本の研究 subagent は孫 agent を生み、WebSearch の Session 予算 200 回を数分で使い切り、利用上限(429)で全滅した。raw 取得物は /tmp/aachat-cmo-research-20261022/ に残るので親が自分で抽出できる。次は subagent 2〜3 本に絞り、WebSearch を使う本数を指定し、WebFetch/jina/GitHub API を主にする。
 - 英語圏の生の声・利用者数の一次値・国内「AI社員」SaaS の価格は未収集。第 7 節の仮定を差し替える材料。
