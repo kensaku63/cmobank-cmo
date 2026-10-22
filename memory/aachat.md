@@ -1,8 +1,9 @@
 # aachat(agentic company builder)
 
-## 現在地の一文分解(最終更新: 2026-07-18)
-今この事業は、「思いついた構想が薄れないうちに動き出してほしい。作ることに集中し続けたい founder」(N=1 確定・3 人インタビューで検証中)に、Agentic Company Builder(最初の 5 分で専門 agent が誕生し仕事が動き出す)を当て、「Build your agentic company — 思いついた構想が、薄れる前に動き出す会社をつくる」というカテゴリ創造のコミュニケーションで取引を成立させようとしている。
+## 現在地の一文分解(最終更新: 2026-10-22)
+今この事業は、「いつもの Codex・Claude Code をもっと活かしたい人」に、マルチエージェントハーネス aachat(無料・Mac アプリ+CLI・自分のマシンで動く・Agent は GitHub repo)を当て、「あなたの Codex・Claude Code がもっとおもしろくなる」という LP、日本語ブログ 135 本、活用事例 2 本、X(フォロワー 29)で取引(インストールと最初の依頼)を成立させようとしている。成立数は未測定(GA4 正式集計は 2026-10-21 開始、DB 人数は未集計)。kensaku 2026-08-21「一般のユーザーはいない」。
 
+2026-10-22 の CMO 提案(status: proposed、Ask 採否待ち): 狙う需要 = 「Claude Code / Codex を使いひとりで事業を回す人が、自分のマシンの中に AI社員の会社を持ち、自分は判断と承認だけにしたい」。センターピン = 「aachat 社で働く社員と部署を Discover に公開し、複製したら 5 分で動く会社にする」。正本: aachat-marketing docs/cmo-strategy-20261022.md、材料: docs/research-agentic-company-demand-20261022.md。
 ## ビジネスゴール
 - 未確認(kensaku から明示されていない)。dogfooding → community → 初期ユーザーの順で立ち上げる方針。
 
@@ -92,3 +93,32 @@
 - CMO視点の含意: 事例テーマ選定 = 需要の選定。虫の目の生の声で「人数が多い困りごと」を根拠つきで選ぶのが勝ち筋。依頼されたらニーズ調査・事例の需要評価で関与する
 - 未整備(2026-10-05): `content-use-cases` branch 未作成、Projectのbranch設定は team default `main`(CLIで変更不可、WebUI)、push→本番公開経路は未確認
 - 学び: `chat project create <name> --parent <p> --lead <agent> --stdin` は stdin の brief で Lead の setup Session を起動する。REPORT.md は Lead しか書けないので、決定事項とPROJECT.md案を brief に入れて Lead に書かせ、`chat wait --session` で完了を待って検証する
+
+
+## 2026-10-22 CMO戦略 Session(3ab3819f)の記録
+
+### 確定した事実(内部)
+- 2026-09-20〜10-22 の merge 486 件の大半を Agent Session が出した。ブログ日本語 135 本(目標 1000)、活用事例 2 本(目標 100、2 本目は 10/16 時点 404)、設計思想 2 本、docs 日英 70 ページ、X フォロワー 29・投稿 26・他者反応ほぼ 0。
+- Discover 公開物(公開 API 実測): Agent 3(PR Steward clone 3 / Patent Research & Drafting / Travel Planner)、Skill 9(全部 pr-steward 系)、Document template 1、Workflow 1、Plugin 0。全部 kensaku63 名義。ネットワーク効果の供給はほぼゼロ。
+- 製品の制約: 実行は利用者のマシン上の Claude Code / Codex。`aachat up` が動いている間だけ Agent が働く(Trigger も)。Linux headless は systemd linger で可。導入前提は GitHub・gh・Git・Node22・CLI ログイン。
+- GA4 reader は 503 再認証エラー(人間の `gcloud auth application-default login` 待ち)。10/24 の正式初回取得は自分が所有。
+- kensaku の判断履歴: Dotwise 照会却下(コスト見合わず 09-05)、初見 1 名検証・読者理解確認・about-aachat を終了(10-13〜17)、PR1776 単独復活せず。9/6 マーケ文脈リセット。
+
+### 検証結果ログ
+- 2026-10-22(リサーチ): 日本語圏で Claude Code / Codex の中に「AI社員の会社」を自作する人が 2026-07〜10 だけで 20 人以上記事化(18 担当 8 部署 / 9 体 169 本 / 25 部署 / 8 職種 16 案件 / 7 部署 / 5 人チーム)、テンプレを GitHub 公開(CHIERO・Skova・craftcode・shouki)。壊れる場所は権限・記憶・制約・文脈・常駐。実現したい状態の本人の言葉 = 「判断と承認だけ」。頻出の痛み = 「初めまして」に戻る / PC を閉じている間チームは居ない / ルールが 2 割しか届かない / 並列にすると監視が自分の仕事になる / 毎週どこかが壊れる。→ 需要仮説 (a) 支持、(b) 強く支持、(c) 鮮度と集中は未観測、(d) 何から始めれば分からない は反する(この母集団は自作済み)。
+- 2026-10-22(競合): Paperclip ★105,742(2026-03-02 作成、MIT 自己ホスト、"If OpenClaw is an employee, Paperclip is the company"、Cloud は waitlist、不満 = 予算超過・「社員は作るが動かさない」・名前混同)。OpenClaw ★392,716(Foundation、2.0 で既存サブスクから始める導線、MS Autopilot の土台)。OpenAI dots(09-29、teams of dots 予告)、Codex subagents 既定 ON、Claude Code agent teams / Cowork / Managed Agents。Symphony は 09-15 以降停止。Gas Town は作者が終了宣言(「reusable harness は諦めた」)。「会社」を名乗るのは Paperclip だけ。「仕事の終わりに資産が残り次の物差しになる」を名乗る製品は無い。日本語・Mac・無料・既存契約で「会社」を始められる製品は観測できず。
+- 2026-10-22(鳥の目): Zenn claudecode 11,686 記事 / codex 2,160 / paperclip 2。Claude Code・Codex の利用者数一次値は未収集。
+
+### 判断と仮説(2026-10-22)
+- 選ばなかった需要: 開発者の並列運用(真っ赤: Conductor・cmux・Herdr・Offrun・Codex /agents・agent teams)、記憶だけ(ツール内に吸収)、創業者の鮮度と集中(未観測・狭い、ビジョンとして保持)、非エンジニア一般の業務 HowTo(入口を通れない)。
+- No.1 の理由 4 つ: (1) aachat 自身がこの製品で回る会社の唯一の公開実例 (2) 会社の構造(Project/Lead/Ask/Workflow/Trigger/共有文書/REPORT/Wiki/Concept)が最初から入っている (3) ツールの外側(Claude Code でも Codex でも同じ Agent repo) (4) 無料・自分の Mac・既存契約・日本語。
+- モノサシ: 「PC を閉じたあとも会社が回るか。仕事の終わりに何が残るか」。1.5m ベネフィット: 「明日の朝、PC を開いたら仕事が進んでいる。同じことを二度言わなくていい」。MOA: 「自分がフォルダで作っていたこれ、製品があったんだ。しかも会社ごと複製できる」。
+- 重要仮説 H1「自作者は複製したら動く会社を見れば試す」H2「複製した人の一定割合が翌日以降も依頼する」H3「自作者は書く人なので結果を書く」。最小検証 4 週間(10/27〜11/23): 5 Agent + 3 template 公開、LP FV 差し替え、自作者 20 人へ返信。成功 = 複製 50 / 初依頼 20 アカウント / 7 日内再依頼 30%。失敗 = 複製 <10 or 初依頼 <5 → 自作者 5 人インタビュー。否定兆候 = 「自分のフォルダで十分」「GitHub repo がハードル」「PC を閉じると止まるなら同じ」。
+- 12 月 1 万人は計算上届かない(訪問 83 万が必要、現状は二桁以上の差)。先行指標 3 つ(社外毎日利用 100 人 / 複製 500 / 7 日内再依頼 30%)への置き換えを提案。採否は kensaku。
+- 製品への申し送り: 複製→動くまでの手数、PC を閉じても回る経路(headless 手順 or 常駐)、自作フォルダ(CLAUDE.md/AGENTS.md の AI社員一式)の取り込み、複製→初依頼→再依頼の漏斗計測。
+
+### 次回への申し送り
+- まず Ask(CMO 戦略の採否、Project aachat-marketing、2026-10-22 作成)の回答を `chat ask show` で読む。採用なら: Discover 公開の実務(discover-prepare-agent / -template skill、identity・skill・knowledge のみ、memory・secret 除外)→ LP FV 案を kensaku の言葉の好みで 3 案 → 自作者 20 人リスト(research doc の表が起点)→ 計測定義を analytics-redesign へ追加。却下なら: 自由記述の方向で需要の切り方を出し直す。
+- GA4: 10/24 の正式初回取得は reader 再認証が前提。人間の操作が済んだか確認してから取る。
+- リサーチの教訓: 並列 6 本の研究 subagent は孫 agent を生み、WebSearch の Session 予算 200 回を数分で使い切り、利用上限(429)で全滅した。raw 取得物は /tmp/aachat-cmo-research-20261022/ に残るので親が自分で抽出できる。次は subagent 2〜3 本に絞り、WebSearch を使う本数を指定し、WebFetch/jina/GitHub API を主にする。
+- 英語圏の生の声・利用者数の一次値・国内「AI社員」SaaS の価格は未収集。第 7 節の仮定を差し替える材料。
