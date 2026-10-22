@@ -1,0 +1,1478 @@
+{
+ "schema_version": 1,
+ "property": "559259561",
+ "timezone": "Asia/Tokyo",
+ "ga_delay_days": 3,
+ "excluded_dates": [
+  "2026-10-19",
+  "2026-10-20"
+ ],
+ "retention_months": 14,
+ "c02_retention_days": 30,
+ "reports": [
+  {
+   "report_key": "G01",
+   "definition_version": 1,
+   "label": "公開ページを見た・読んだ",
+   "purpose": "どのページが読まれ、滞在されたか",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "auto",
+   "event": null,
+   "version_filter": null,
+   "host_filter": "aachat.io",
+   "variants": {
+    "total": [],
+    "breakdown": [
+     "pagePath",
+     "pageTitle"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "screenPageViews",
+     "label": "閲覧回数",
+     "source_field": "screenPageViews",
+     "unit": "views",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "ページ閲覧回数"
+    },
+    {
+     "metric_key": "activeUsers",
+     "label": "GAアクティブ利用者",
+     "source_field": "activeUsers",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "期間全体のGAアクティブ利用者数。日別や内訳の和にしない"
+    },
+    {
+     "metric_key": "userEngagementDuration",
+     "label": "エンゲージメント合計秒",
+     "source_field": "userEngagementDuration",
+     "unit": "seconds",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "前面表示の合計秒"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-21",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": "aachat.io",
+    "event": null,
+    "measurement_version": null,
+    "note": "/product は非公開・未登録pathをまとめた入口"
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-21",
+     "valid_to": null,
+     "state": "accepted",
+     "reason_code": "core_path_accepted",
+     "note": "Core取得経路は2026-10-21受入（ga4-reader-recovery-20261021.md）"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G02",
+   "definition_version": 1,
+   "label": "どこから入り、利用したか",
+   "purpose": "流入元×入口ページで集客の質を見る",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "auto",
+   "event": null,
+   "version_filter": null,
+   "host_filter": "aachat.io",
+   "variants": {
+    "total": [],
+    "breakdown": [
+     "sessionSourceMedium",
+     "landingPage"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "sessions",
+     "label": "セッション",
+     "source_field": "sessions",
+     "unit": "sessions",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "セッション数"
+    },
+    {
+     "metric_key": "engagedSessions",
+     "label": "エンゲージメントのあったセッション",
+     "source_field": "engagedSessions",
+     "unit": "sessions",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "10秒超・2画面以上等のセッション"
+    },
+    {
+     "metric_key": "activeUsers",
+     "label": "GAアクティブ利用者",
+     "source_field": "activeUsers",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "期間全体のGAアクティブ利用者数。日別や内訳の和にしない"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-21",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": "aachat.io",
+    "event": null,
+    "measurement_version": null,
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-21",
+     "valid_to": null,
+     "state": "accepted",
+     "reason_code": "core_path_accepted",
+     "note": "Core取得経路は2026-10-21受入（ga4-reader-recovery-20261021.md）"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G03",
+   "definition_version": 1,
+   "label": "GAで観測した新規登録",
+   "purpose": "Web経由の登録の推移",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "v1",
+   "event": "sign_up",
+   "version_filter": "v1",
+   "host_filter": null,
+   "variants": {
+    "total": []
+   },
+   "metrics": [
+    {
+     "metric_key": "eventCount",
+     "label": "イベント件数",
+     "source_field": "eventCount",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "条件に合うイベントの件数"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-21",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "sign_up",
+    "measurement_version": "v1",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-21",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "signup_event_not_accepted",
+     "note": "実登録イベントの受入が未完了"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G04",
+   "definition_version": 1,
+   "label": "登録者のGA初回流入",
+   "purpose": "登録した人が最初にどこから来たか",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "v1",
+   "event": "sign_up",
+   "version_filter": "v1",
+   "host_filter": null,
+   "variants": {
+    "breakdown": [
+     "firstUserSourceMedium"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "eventCount",
+     "label": "イベント件数",
+     "source_field": "eventCount",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "条件に合うイベントの件数"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-21",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "sign_up",
+    "measurement_version": "v1",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-21",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "signup_event_not_accepted",
+     "note": "実登録イベントの受入が未完了"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G05",
+   "definition_version": 1,
+   "label": "登録時のGAセッション流入",
+   "purpose": "登録直前の訪問の流入元",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "v1",
+   "event": "sign_up",
+   "version_filter": "v1",
+   "host_filter": null,
+   "variants": {
+    "breakdown": [
+     "sessionSourceMedium"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "eventCount",
+     "label": "イベント件数",
+     "source_field": "eventCount",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "条件に合うイベントの件数"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-21",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "sign_up",
+    "measurement_version": "v1",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-21",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "signup_event_not_accepted",
+     "note": "実登録イベントの受入が未完了"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G06",
+   "definition_version": 1,
+   "label": "人間が直接仕事を頼んだ（Web）",
+   "purpose": "Webでの直接依頼の件数と人数",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "v1",
+   "event": "human_request_accepted",
+   "version_filter": "v1",
+   "host_filter": null,
+   "variants": {
+    "total": []
+   },
+   "metrics": [
+    {
+     "metric_key": "eventCount",
+     "label": "イベント件数",
+     "source_field": "eventCount",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "条件に合うイベントの件数"
+    },
+    {
+     "metric_key": "totalUsers",
+     "label": "GA利用者",
+     "source_field": "totalUsers",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "期間全体のGA利用者数。日別や内訳の和にしない"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-21",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "human_request_accepted",
+    "measurement_version": "v1",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-21",
+     "valid_to": null,
+     "state": "accepted",
+     "reason_code": "core_path_accepted",
+     "note": "Core取得経路は2026-10-21受入（ga4-reader-recovery-20261021.md）"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G07",
+   "definition_version": 1,
+   "label": "新規依頼と追加依頼の内訳",
+   "purpose": "start / follow_up の比率",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "v1",
+   "event": "human_request_accepted",
+   "version_filter": "v1",
+   "host_filter": null,
+   "variants": {
+    "breakdown": [
+     "customEvent:request_kind"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "eventCount",
+     "label": "イベント件数",
+     "source_field": "eventCount",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "条件に合うイベントの件数"
+    },
+    {
+     "metric_key": "totalUsers",
+     "label": "GA利用者",
+     "source_field": "totalUsers",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "期間全体のGA利用者数。日別や内訳の和にしない"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-21",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "human_request_accepted",
+    "measurement_version": "v1",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-21",
+     "valid_to": null,
+     "state": "accepted",
+     "reason_code": "core_path_accepted",
+     "note": "Core取得経路は2026-10-21受入（ga4-reader-recovery-20261021.md）"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G08",
+   "definition_version": 1,
+   "label": "資料を開いて見た",
+   "purpose": "成果物（文書・メディア）が見られているか",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "v1",
+   "event": "artifact_viewed",
+   "version_filter": "v1",
+   "host_filter": null,
+   "variants": {
+    "total": [],
+    "breakdown": [
+     "customEvent:artifact_kind"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "eventCount",
+     "label": "イベント件数",
+     "source_field": "eventCount",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "条件に合うイベントの件数"
+    },
+    {
+     "metric_key": "totalUsers",
+     "label": "GA利用者",
+     "source_field": "totalUsers",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "期間全体のGA利用者数。日別や内訳の和にしない"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-21",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "artifact_viewed",
+    "measurement_version": "v1",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-21",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "added_query_not_accepted",
+     "note": "件数・種類別は追加queryで実取得の受入待ち"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G09",
+   "definition_version": 1,
+   "label": "期間内の最初の依頼系列で再依頼",
+   "purpose": "依頼した人が7日以内にもう一度頼んだか",
+   "source": "ga4_funnel",
+   "source_id": "559259561",
+   "measurement_version": "v1",
+   "event": "human_request_accepted",
+   "version_filter": "v1",
+   "host_filter": null,
+   "variants": {
+    "total": []
+   },
+   "metrics": [
+    {
+     "metric_key": "step1_users",
+     "label": "最初の依頼をした人",
+     "source_field": "step1_users",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "funnel step1 activeUsers"
+    },
+    {
+     "metric_key": "step2_users",
+     "label": "7日以内に再依頼した人",
+     "source_field": "step2_users",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "funnel step2 activeUsers。同日の追加依頼を含む"
+    }
+   ],
+   "periods": [
+    "window"
+   ],
+   "fetch_start": "2026-10-21",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "human_request_accepted",
+    "measurement_version": "v1",
+    "note": "成熟した定着率ではない"
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-21",
+     "valid_to": null,
+     "state": "accepted",
+     "reason_code": "funnel_visualization_accepted",
+     "note": "visualization経由のstep1/step2のみ受入"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G10",
+   "definition_version": 1,
+   "label": "初期体験の工程",
+   "purpose": "どの工程で止まっているか",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "v2",
+   "event": "journey_step",
+   "version_filter": "v2",
+   "host_filter": null,
+   "variants": {
+    "breakdown": [
+     "customEvent:step",
+     "customEvent:phase"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "eventCount",
+     "label": "イベント件数",
+     "source_field": "eventCount",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "条件に合うイベントの件数"
+    },
+    {
+     "metric_key": "totalUsers",
+     "label": "GA利用者",
+     "source_field": "totalUsers",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "期間全体のGA利用者数。日別や内訳の和にしない"
+    },
+    {
+     "metric_key": "customEvent:elapsed_seconds",
+     "label": "所要時間の合計",
+     "source_field": "customEvent:elapsed_seconds",
+     "unit": "seconds",
+     "value_type": "real",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "時間が付いたイベントの合計秒。件数で割って平均にしない"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-22",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "journey_step",
+    "measurement_version": "v2",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-22",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "growth_events_not_accepted",
+     "note": "growth版の正式開始日は未確定"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G11",
+   "definition_version": 1,
+   "label": "読まれた記事の分類",
+   "purpose": "どの記事の型・テーマが読まれるか",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "v2",
+   "event": "content_view",
+   "version_filter": "v2",
+   "host_filter": null,
+   "variants": {
+    "total": [],
+    "breakdown": [
+     "customEvent:content_format",
+     "customEvent:content_topic"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "eventCount",
+     "label": "イベント件数",
+     "source_field": "eventCount",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "条件に合うイベントの件数"
+    },
+    {
+     "metric_key": "totalUsers",
+     "label": "GA利用者",
+     "source_field": "totalUsers",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "期間全体のGA利用者数。日別や内訳の和にしない"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-22",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "content_view",
+    "measurement_version": "v2",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-22",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "growth_events_not_accepted",
+     "note": "growth版の正式開始日は未確定"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G12",
+   "definition_version": 1,
+   "label": "登録時に固定された集客経路",
+   "purpose": "どの経路の登録が多いか",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "v1",
+   "event": "sign_up",
+   "version_filter": "v1",
+   "host_filter": null,
+   "variants": {
+    "total": [],
+    "breakdown": [
+     "customEvent:signup_source",
+     "customEvent:signup_campaign",
+     "customEvent:first_source"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "eventCount",
+     "label": "イベント件数",
+     "source_field": "eventCount",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "条件に合うイベントの件数"
+    },
+    {
+     "metric_key": "totalUsers",
+     "label": "GA利用者",
+     "source_field": "totalUsers",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "期間全体のGA利用者数。日別や内訳の和にしない"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-22",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "sign_up",
+    "measurement_version": "v1",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-22",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "growth_events_not_accepted",
+     "note": "growth版の正式開始日は未確定"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G13",
+   "definition_version": 1,
+   "label": "初めて観測した依頼か",
+   "purpose": "新しく使い始めた人の依頼か",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "v1",
+   "event": "human_request_accepted",
+   "version_filter": "v1",
+   "host_filter": null,
+   "variants": {
+    "breakdown": [
+     "customEvent:first_observed_request"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "eventCount",
+     "label": "イベント件数",
+     "source_field": "eventCount",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "条件に合うイベントの件数"
+    },
+    {
+     "metric_key": "totalUsers",
+     "label": "GA利用者",
+     "source_field": "totalUsers",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "期間全体のGA利用者数。日別や内訳の和にしない"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-22",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "human_request_accepted",
+    "measurement_version": "v1",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-22",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "growth_events_not_accepted",
+     "note": "growth版の正式開始日は未確定"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "G14",
+   "definition_version": 1,
+   "label": "最初の依頼の最終結果を見た",
+   "purpose": "最初の成功体験に届いたか",
+   "source": "ga4_core",
+   "source_id": "559259561",
+   "measurement_version": "v2",
+   "event": "first_result_viewed",
+   "version_filter": "v2",
+   "host_filter": null,
+   "variants": {
+    "total": [],
+    "breakdown": [
+     "customEvent:signup_source",
+     "customEvent:signup_campaign"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "eventCount",
+     "label": "イベント件数",
+     "source_field": "eventCount",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "条件に合うイベントの件数"
+    },
+    {
+     "metric_key": "totalUsers",
+     "label": "GA利用者",
+     "source_field": "totalUsers",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "期間全体のGA利用者数。日別や内訳の和にしない"
+    },
+    {
+     "metric_key": "customEvent:elapsed_seconds",
+     "label": "所要時間の合計",
+     "source_field": "customEvent:elapsed_seconds",
+     "unit": "seconds",
+     "value_type": "real",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "時間が付いたイベントの合計秒。件数で割って平均にしない"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-10-22",
+   "scope": {
+    "population": "同意したWeb利用者（GA観測）",
+    "excludes": [
+     "Desktop",
+     "CLI",
+     "Guest",
+     "Agent自動実行",
+     "全DB登録数"
+    ],
+    "host": null,
+    "event": "first_result_viewed",
+    "measurement_version": "v2",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-19",
+     "valid_to": "2026-10-20",
+     "state": "excluded",
+     "reason_code": "validation_days",
+     "note": "検証・立上げ日。正式比較から除外"
+    },
+    {
+     "valid_from": "2026-10-22",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "growth_events_not_accepted",
+     "note": "growth版の正式開始日は未確定"
+    }
+   ],
+   "evidence_ref": "Agent knowledge/ga4/RUNBOOK.md; Project docs/ga4-operations.md"
+  },
+  {
+   "report_key": "P01",
+   "definition_version": 1,
+   "label": "新規の人間アカウント",
+   "purpose": "全クライアントの登録の推移",
+   "source": "product_daily",
+   "source_id": "aachat-product-daily",
+   "measurement_version": "daily_v1",
+   "event": null,
+   "version_filter": null,
+   "host_filter": null,
+   "variants": {
+    "total": [],
+    "breakdown": [
+     "audience",
+     "auth_kind"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "accounts",
+     "label": "新規アカウント",
+     "source_field": "accounts",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "その日に作成された人間アカウント。内訳は互いに重ならない"
+    }
+   ],
+   "periods": [
+    "day"
+   ],
+   "fetch_start": "2026-07-24",
+   "scope": {
+    "population": "全クライアント（Web・Desktop・CLI）の人間アカウント。自然人数ではない",
+    "internal": "aachatチームのactive member。Agentは持ち主に帰属",
+    "source": "kensaku63/aachat Actions analytics-daily-usage.yml",
+    "note": ""
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-07-24",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "first_production_run_pending",
+     "note": "本番での初回集計の確認待ち"
+    }
+   ],
+   "evidence_ref": "kensaku63/aachat dev/analytics/daily-usage.sql, docs/reference/analytics.md"
+  },
+  {
+   "report_key": "P02",
+   "definition_version": 1,
+   "label": "直接仕事を頼んだ人間アカウント",
+   "purpose": "日常利用（目標: 社外1万人が毎日）の進み具合",
+   "source": "product_daily",
+   "source_id": "aachat-product-daily",
+   "measurement_version": "daily_v1",
+   "event": null,
+   "version_filter": null,
+   "host_filter": null,
+   "variants": {
+    "total": [],
+    "breakdown": [
+     "audience",
+     "auth_kind"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "accounts",
+     "label": "依頼したアカウント",
+     "source_field": "accounts",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "source_window_only",
+     "meaning": "期間内に1回以上直接依頼した人間アカウント。同じ取得の内訳は互いに重ならず合計できる"
+    },
+    {
+     "metric_key": "requests",
+     "label": "直接依頼の件数",
+     "source_field": "requests",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "人間の直接依頼（新規・追加）"
+    }
+   ],
+   "periods": [
+    "day",
+    "window"
+   ],
+   "fetch_start": "2026-07-24",
+   "scope": {
+    "population": "全クライアント（Web・Desktop・CLI）の人間アカウント。自然人数ではない",
+    "internal": "aachatチームのactive member。Agentは持ち主に帰属",
+    "source": "kensaku63/aachat Actions analytics-daily-usage.yml",
+    "note": "直接依頼の境界はGAのhuman_request_acceptedと同じ"
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-07-24",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "first_production_run_pending",
+     "note": "本番での初回集計の確認待ち"
+    }
+   ],
+   "evidence_ref": "kensaku63/aachat dev/analytics/daily-usage.sql, docs/reference/analytics.md"
+  },
+  {
+   "report_key": "P03",
+   "definition_version": 1,
+   "label": "自動で動いた仕事",
+   "purpose": "Agent・Workflow・Triggerにどれだけ任されているか",
+   "source": "product_daily",
+   "source_id": "aachat-product-daily",
+   "measurement_version": "daily_v1",
+   "event": null,
+   "version_filter": null,
+   "host_filter": null,
+   "variants": {
+    "breakdown": [
+     "kind",
+     "audience"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "events",
+     "label": "件数",
+     "source_field": "events",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "種類別の件数。種類どうしは重なるので合計しない"
+    }
+   ],
+   "periods": [
+    "day"
+   ],
+   "fetch_start": "2026-07-24",
+   "scope": {
+    "population": "全クライアント（Web・Desktop・CLI）の人間アカウント。自然人数ではない",
+    "internal": "aachatチームのactive member。Agentは持ち主に帰属",
+    "source": "kensaku63/aachat Actions analytics-daily-usage.yml",
+    "note": "kind: workflow_run / trigger_start / agent_request"
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-07-24",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "first_production_run_pending",
+     "note": "本番での初回集計の確認待ち"
+    }
+   ],
+   "evidence_ref": "kensaku63/aachat dev/analytics/daily-usage.sql, docs/reference/analytics.md"
+  },
+  {
+   "report_key": "C01",
+   "definition_version": 1,
+   "label": "登録期間コホート（Web観測）",
+   "purpose": "登録後7/14/28日に使い続けたか",
+   "source": "product_growth",
+   "source_id": "aachat-product-growth",
+   "measurement_version": "growth_v1",
+   "event": null,
+   "version_filter": null,
+   "host_filter": null,
+   "variants": {
+    "breakdown": [
+     "signup_source",
+     "signup_campaign",
+     "first_source",
+     "signup_medium",
+     "signup_content",
+     "signup_landing"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "registrations_observed",
+     "label": "観測できた登録者",
+     "source_field": "registrations_observed",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "現在残存する同意済みWeb観測の登録者。全登録者ではない"
+    },
+    {
+     "metric_key": "denominator7",
+     "label": "7日分母",
+     "source_field": "denominator7",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "D0–D6を観測できる登録者"
+    },
+    {
+     "metric_key": "immature7",
+     "label": "7日未成熟",
+     "source_field": "immature7",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "D6に未到達"
+    },
+    {
+     "metric_key": "consent_unavailable7",
+     "label": "7日同意不足",
+     "source_field": "consent_unavailable7",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "成熟済みだが同意期間が不足"
+    },
+    {
+     "metric_key": "first_use7",
+     "label": "7日以内の初回依頼",
+     "source_field": "first_use7",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "D0–D6に直接依頼"
+    },
+    {
+     "metric_key": "first_result_ready7",
+     "label": "7日以内の回答準備",
+     "source_field": "first_result_ready7",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "最初の依頼系列の回答準備がD0–D6に完了"
+    },
+    {
+     "metric_key": "first_result7",
+     "label": "7日以内の初回結果確認",
+     "source_field": "first_result7",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "最初の依頼の最終結果をD0–D6に確認"
+    },
+    {
+     "metric_key": "distinct_day_reuse7",
+     "label": "7日以内の別日再利用",
+     "source_field": "distinct_day_reuse7",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "D0–D6の異なる2日以上に直接依頼"
+    },
+    {
+     "metric_key": "denominator14",
+     "label": "14日分母",
+     "source_field": "denominator14",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "D0–D13を観測できる登録者"
+    },
+    {
+     "metric_key": "immature14",
+     "label": "14日未成熟",
+     "source_field": "immature14",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "D13に未到達"
+    },
+    {
+     "metric_key": "consent_unavailable14",
+     "label": "14日同意不足",
+     "source_field": "consent_unavailable14",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "成熟済みだが同意期間が不足"
+    },
+    {
+     "metric_key": "next_week_use",
+     "label": "翌週利用",
+     "source_field": "next_week_use",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "D7–D13に直接依頼"
+    },
+    {
+     "metric_key": "denominator28",
+     "label": "28日分母",
+     "source_field": "denominator28",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "D0–D27を観測できる登録者"
+    },
+    {
+     "metric_key": "immature28",
+     "label": "28日未成熟",
+     "source_field": "immature28",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "D27に未到達"
+    },
+    {
+     "metric_key": "consent_unavailable28",
+     "label": "28日同意不足",
+     "source_field": "consent_unavailable28",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "成熟済みだが同意期間が不足"
+    },
+    {
+     "metric_key": "retained28",
+     "label": "4週間の継続利用",
+     "source_field": "retained28",
+     "unit": "users",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "4区間中3区間以上で直接依頼（暫定定義）"
+    },
+    {
+     "metric_key": "request_to_result_median_seconds",
+     "label": "初回依頼→結果確認 中央値",
+     "source_field": "request_to_result_median_seconds",
+     "unit": "seconds",
+     "value_type": "real",
+     "aggregation_rule": "non_additive",
+     "meaning": "合算・平均しない"
+    },
+    {
+     "metric_key": "request_to_result_p90_seconds",
+     "label": "初回依頼→結果確認 p90",
+     "source_field": "request_to_result_p90_seconds",
+     "unit": "seconds",
+     "value_type": "real",
+     "aggregation_rule": "non_additive",
+     "meaning": "合算・平均しない"
+    },
+    {
+     "metric_key": "request_to_ready_median_seconds",
+     "label": "初回依頼→回答準備 中央値",
+     "source_field": "request_to_ready_median_seconds",
+     "unit": "seconds",
+     "value_type": "real",
+     "aggregation_rule": "non_additive",
+     "meaning": "合算・平均しない"
+    },
+    {
+     "metric_key": "ready_to_view_median_seconds",
+     "label": "回答準備→結果確認 中央値",
+     "source_field": "ready_to_view_median_seconds",
+     "unit": "seconds",
+     "value_type": "real",
+     "aggregation_rule": "non_additive",
+     "meaning": "合算・平均しない"
+    }
+   ],
+   "periods": [
+    "cohort"
+   ],
+   "fetch_start": "2026-10-21",
+   "scope": {
+    "population": "同意したWeb観測の登録者",
+    "source": "operator growth-report JSON"
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-21",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "provider_start_not_set",
+     "note": "提供元が正式開始日と除外日を示すまで保留"
+    }
+   ],
+   "evidence_ref": "kensaku63/aachat dev/analytics/growth-report.sql, dev/scripts/analytics-growth-report.py"
+  },
+  {
+   "report_key": "C02",
+   "definition_version": 1,
+   "label": "日別の計測運用件数",
+   "purpose": "計測対象判定が動いているか",
+   "source": "product_growth",
+   "source_id": "aachat-product-growth",
+   "measurement_version": "growth_v1",
+   "event": null,
+   "version_filter": null,
+   "host_filter": null,
+   "variants": {
+    "breakdown": [
+     "event_name",
+     "outcome"
+    ]
+   },
+   "metrics": [
+    {
+     "metric_key": "count",
+     "label": "件数",
+     "source_field": "count",
+     "unit": "events",
+     "value_type": "integer",
+     "aggregation_rule": "sum_disjoint",
+     "meaning": "計測対象判定の運用件数。GA受信件数・同意率ではない"
+    }
+   ],
+   "periods": [
+    "day"
+   ],
+   "fetch_start": "2026-10-21",
+   "scope": {
+    "population": "計測対象判定の運用カウンター（30日保持）"
+   },
+   "coverage": [
+    {
+     "valid_from": "2026-10-21",
+     "valid_to": null,
+     "state": "pending",
+     "reason_code": "provider_start_not_set",
+     "note": "提供元が正式開始日と除外日を示すまで保留"
+    }
+   ],
+   "evidence_ref": "kensaku63/aachat dev/analytics/growth-report.sql, dev/scripts/analytics-growth-report.py"
+  }
+ ]
+}
