@@ -1,13 +1,41 @@
-# aachat(agentic company builder)
+# aachat (Agentic Business Builder)
 
-## 現在地の一文分解(最終更新: 2026-10-22)
+## 現在地の一文分解(最終更新: 2026-10-29)
+事業を作りたい人に、事業を生成するAIエージェントハーネスaachatを提供する。第一コンセプトは「aachat is the Agentic Business Builder.」、招待は「Build your agentic business」。実際の事業づくりの仕事で価値を実感し、毎日使い続ける利用へつなげる。
+
+## ビジネスゴール
+- 2026年12月までに1万人がaachatを毎日使う。正本: aachat/teams/aachat/projects/aachat-marketing/docs/PROJECT.md。人間アカウント数・自然人数・Agent実行数を区別する。現在の利用値は同ProjectのREPORT.mdで確認し、以下の過去値を流用しない。
+
+## 確定事項(意思決定済み)
+- 2026-10-29、kensaku63が作る対象を会社から事業へ変更。会社は事業を立ち上げ、続けるための手段。
+- 中心価値: 事業を理解するAIへ、事業を作る仕事を目的から結果まで、より大きなまとまりで任せられる。
+- 正本: aachat/teams/aachat/wiki/company/communication.md と purpose.md。過去のkey-concepts v5やregistryの記録を現在の訴求の正本として使わない。
+- Company as Code、Agentic Company（会社の状態）、Agent as Codeは名前を保つ。「地球上の会社の数を1000倍」の長期ビジョンは今回変更なし。
+- 10/22戦略はAsk a6a680f4-3338-409b-b786-782ceeec00f5で保留。Discover社員公開・5分複製・12月の目標指標置換を再開しない。新方針への文書整合は実行再開の承認ではない。
+
+## 未検証の重要仮説
+- 狙う需要の読み替え: 作りたい事業がある人が、目的を理解するAIに立ち上げ・改善の仕事をまとまりで任せ、目的設定と重要判断に集中しながら、顧客に価値を届ける事業を作り、育てたい。
+- センターピンの読み替え: 利用者自身の事業の目的から、一まとまりの仕事を任せ、次の事業判断に使える結果を得る体験。Discoverや社員・部署の複製は手段候補であり、目的や実証ではない。
+- 詳細と否定兆候: aachat/teams/aachat/projects/aachat-marketing/docs/business-builder-strategy-reading-20261029.md。旧調査の自作行動を新需要の実在・市場規模・競合優位の証明にしない。状態は未検証、今回の検証実行なし。
+
+## 撤退・変更条件
+- 事業づくりのための代替行動が確認できない、結果が事業判断に使われない、負担が減らず再利用されない場合は、需要と価値体験の仮説を見直す。観測不足は保留とし、組織への興味や複製数で追認しない。
+
+## 次回への申し送り
+- 現在の方針はTeam Wiki、Projectの目標と現在地はPROJECT.md・REPORT.mdを読む。以下の過去のコピー、提案、未実施作業を現在の依頼や承認として再開しない。
+- LP・docs・ブログ・X・chatbotの反映はそれぞれの担当。ここに保存した方針整合を各面の公開完了と扱わない。
+
+## 2026-10-22以前の記録（当時の内容を保存）
+以下は過去の観測・判断・引用・申し送り。「確定」「正本」「次の実働」等も当時の状態を表し、現行方針は上記を優先する。旧表記や人間発言は履歴として残す。
+
+### 現在地の一文分解(最終更新: 2026-10-22)
 今この事業は、「いつもの Codex・Claude Code をもっと活かしたい人」に、マルチエージェントハーネス aachat(無料・Mac アプリ+CLI・自分のマシンで動く・Agent は GitHub repo)を当て、「あなたの Codex・Claude Code がもっとおもしろくなる」という LP、日本語ブログ 135 本、活用事例 2 本、X(フォロワー 29)で取引(インストールと最初の依頼)を成立させようとしている。成立数は未測定(GA4 正式集計は 2026-10-21 開始、DB 人数は未集計)。kensaku 2026-08-21「一般のユーザーはいない」。
 
 2026-10-22 の CMO 提案(status: on_hold。kensaku 回答「とてもいい案だが、一旦、保留」2026-10-22): 狙う需要 = 「Claude Code / Codex を使いひとりで事業を回す人が、自分のマシンの中に AI社員の会社を持ち、自分は判断と承認だけにしたい」。センターピン = 「aachat 社で働く社員と部署を Discover に公開し、複製したら 5 分で動く会社にする」。正本: aachat-marketing docs/cmo-strategy-20261022.md、材料: docs/research-agentic-company-demand-20261022.md。
-## ビジネスゴール
+### ビジネスゴール
 - 未確認(kensaku から明示されていない)。dogfooding → community → 初期ユーザーの順で立ち上げる方針。
 
-## 確定事項(意思決定済み)
+### 確定事項(意思決定済み)
 - キーコンセプトマップの正本: aachat-key-concept project の key-concepts.md(v5、2026-07-18)
 - v5 確定(kensaku 承認 2026-07-18): A1「Build your agentic company — 思いついた構想が、薄れる前に動き出す会社をつくる」/ C1 需要 = 鮮度と集中(第4案)/ D2 = 最初の5分で専門 agent が誕生し最初の仕事が動き出す(覚えることゼロ)。registry へ change revision 3 件 propose 済み(A1: d362a50f / C1: 556a287b / D2: c620f896)、publish 待ち
 - registry への propose は aachat-mcp への stdio JSON-RPC で可能(initialize → notifications/initialized → tools/call。helper パターンは検証済み)
@@ -17,13 +45,13 @@
 - kensaku の言葉の好み: 翻訳調・metaphor(共犯者・複利)・説明訳(AIエージェントが働く会社)は嫌う。シンプルで主語が立つ言葉。上位コンセプトほど文言にこだわる。圧縮した抽象名詞(切替コスト・認知コスト・運び屋・会社の地図)も「もう少しわかりやすく」と修正が入る(2026-07-24)。通る型は平易な話し言葉の言い切り(「一度伝えたことは、次から直っている」)
 - ユーザー価値インベントリの正本: aachat/projects/aachat/concepts/docs/user-value-inventory.md(2026-07-24 作成)。kensaku が 16 項目を採用・文言確定(【採用】マーク付き)。X/Qiita/Zenn/founder ブログの現状の心の声(セクション 0)と対応付け済み。別 agent(takagi)がセクション 8〜18 を追加調査で拡張中
 
-## 未検証の重要仮説
+### 未検証の重要仮説
 - 狙う需要 = 「鮮度と集中」(C1 第4案)が kensaku 以外の founder にも通じる(検証: 実在 3 人インタビュー / 成功: 3 人中 2 人以上から誘導なしで「薄れる・冷める・集中が切れる」系の固有の言葉 / 失敗: 全員が前進・拡大の言葉のみ→C1 を前進・拡大側へ戻し A1 も再検討 / 状態: 未着手。3 人の欲求は現状「言語化して組織に落とす・まるっと任せる・売上3倍」で鮮度の言葉は未観測)
 - A0→C1 接続(想像起点の欲求)は N=1 で支持済み(「頭の中のイメージ」「具現化できない」が誘導なしに出た)。他 founder での再現は上記インタビューで確認
 - 「agent が作成された = 資産が残った」が初見ユーザーにも通じる(検証: prototype。dogfooding 済み founder の実感かもしれない / 状態: 未着手)
 - 鮮度のモノサシで立っている競合は不在(検証: 魚の目 research / 状態: 未着手)
 
-## 検証結果ログ
+### 検証結果ログ
 - 2026-07-24(VP切り口セッション): 「自律的組織」以外の VP 切り口を 9+3 案検討し、concepts project の value-proposition-angles.md に正本化。VP の全体地図 =「動く(自律・鮮度・稼働時間)/残る(資産・所有)/効く(浸透)/稼ぐ(受注拡大)」の 4 系統。自己評価の有望順: (1) C 浸透軸「一度決めたことが、次の日から全員に効いている」(競合不在・Concept/OKR primitive が直接 proof・融合の発見型) (2) A 資産軸(退避スクリプト自作層向け第二入口 VP。concept.md の「assets 化は proof であり約束ではない」との緊張を明記済み) (3) D 受注拡大軸「先月断った案件を、今月は受けられる」(唯一の売上直結)。kensaku は「もっとほかの切り口は」と発散を要求した段階で、採否判断は未取得。次: kensaku の選択 → 需要検証 → registry へ value_proposition propose(794bf779 と並列、対象セグメント明記)
 - 2026-07-24: ユーザー価値インベントリ(虫の目)作成・kensaku レビューで 16 項目採用。web 調査の核心発見: 市場の痛みは「AI が賢くない」ではなく「文脈・成果物・判断を人間が手で運び続けている」に集中。回避策(Claude Code セッション引き継ぎスクリプト自作、ChatGPT 出力の Notion 退避、worktree 手動運用)が記事として量産されている事実自体が需要の実在証拠。demo / メッセージの第一ターゲット候補: 引き継ぎスクリプト自作層と Notion 退避層に「もうやらなくていい」と言い切る形。次の一手: 16 項目のうちどの心の声が実在ユーザーで最頻出かをインタビューで裏取り(C1 検証インタビューと統合可能)
 - 2026-07-21: okr project で kensaku/sotaooo が戦略メモを投稿(seq 1-16)。新事実: (1) 根本思想 =「トークン費用対効果の最大化」、aachat の価値 =「1 セッション当たりの価値がいかに増えるか」 (2) 勝ち筋 = 無料提供 → Discovery ネットワーク効果で moat → 有料化 (3) マーケ大方針 = web 上の露出面最大化を狙うコンテンツマーケ中心(kensaku 確定方針) (4) 課題認識 = コンセプト作成が難しすぎる・最適な OKR が作れない・ブランドメッセージ未確定(seq 16)。私の考察を seq 17 に投稿: 「セッション当たり価値」は需要の言葉ではなく Right to Win のモノサシの発明 / 無料期の成功指標は代替行動からの乗り換え観測 / コンテンツの狙う面は検索順位より AI の引用(GEO。AI 経由流入 +357% YoY、ChatGPT 最頻引用の 28.3% は Google 上位不在) / エージェント自身による一次情報量産 = dogfooding として構造的 Right to Win / センターピンは引き続き実在 3 人インタビュー
@@ -32,10 +60,10 @@
 - 2026-07-14〜17: kensaku が concern 8 件・endorsement 1 件(B2)・D1 削除・A2/A3 を contextual に調整。文言懸念(A1/B3/B4)、高度不足(B6/旧C2)、需要のずれ(C1)
 - 2026-07-17: v4 反映。registry へ 8 件の pending revision 提案(A1・B3・B4・C1需要・D2 change + Build with us 言い換え + A0 想像を創造する new + A3 改訂)と link candidate 1 本(A1 realizes A0)。A0/A3 は kensaku 承認済み(「いいですね」)、他 6 件は review 待ち
 
-## 撤退・変更条件
+### 撤退・変更条件
 - C1 需要の research で生の言葉・代替行動が取れなければ、切り方(実現したい状態)ごと再検討に戻る
 
-## servise-site: セールスエージェント対話セクション企画(2026-07-22)
+### servise-site: セールスエージェント対話セクション企画(2026-07-22)
 - 出力: docs/sections/agent-dialogue.md(status: draft)。起動トリガー・トーン・最初の問いかけ・欲求ヒアリング→4点セット→クロージング・会話ログ資産化を確定設計として記述
 - 核心の判断: 最初の問いかけにC1(鮮度と集中)語彙を絶対に入れない。理由は、この対話ログ自体がH3の検証チャネルであり、問いかけに答えの語彙を先出しすると来訪者がそれを復唱するだけになり観測が誘導で汚染されるため。A0(頭の中のイメージ/具現化できない、2026-07-18 N=1で誘導なし観測済み)の語彙のみ使用可
 - No.1の理由(4点セット③)は個別化せず固定: 「証言・実績セクションを置かない」設計を、対話そのものを証拠にする(今この会話が動いている事実)ことで代替する一手として設計
@@ -45,7 +73,7 @@
 - 2026-07-22追記2: flagship-story.md確定版から「対話起動はポップアップではなく映像の続き」という申し送りを受け、agent-dialogue.md第6節を訂正。誤り: 「右下のアバターが展開して対話パネルになる」→ 正: 映像(申請完了画面)が占めていた場所自体が対話面に連続的に変わる。右下アバターの役目は起動演出ではなく起動後の発話者アイコンに変更(画面移動なし)。第二トリガー発火時も静止フレーム=申請完了画面という映像側設計に対話面の出現位置を合わせた
 - 2026-07-22追記3: kensaku63が2 ask双方とも暫定案のまま承認(閾値90%/45秒、プライバシー方針とも「進める」)。agent-dialogue.md status を confirmed に更新済み
 
-## servise-site OKR(自分がowner、active、2026-07-22起動)
+### servise-site OKR(自分がowner、active、2026-07-22起動)
 - OKR「サービスサイトを訪れた人が、aachatの魅力に惹かれ、使ってみたくなる」(id: 67a63760)。ゴール正本は servise-site project の PROJECT.md
 - kensaku確定方針(2026-07-22): (1) サイト常駐のAIエージェントが会話アンケートを取り、それを第一コンバージョンにする (2) そのエージェントがユーザーにセールスしてトライアルへ引き上げる (3) 実在3人インタビューはいったん停止 (4) 現状サイトほぼ無しのため全KRベースライン0で確定
 - センターピン = セールスエージェントの接客体験(プロダクトデモ・第一CV・需要リサーチ資産の三役)
@@ -58,7 +86,7 @@
 - closing-cta.mdセクション企画完了(draft、2026-07-22): 常時表示のミニマルCTA(FVから常在、控えめ)とページ末尾のクロージングセクション(順序4本体)の二層構造。一層だけだと対話起動前の離脱者を保険として拾えないための設計。コピーは5行: 見出し(A1コアフレーズの再点火)/ 何を・いくらで・どうすれば(1文)/ 今やる理由(C1「鮮度と集中」の実データ、人工的な希少性は使わない)/ 低リスク(N=1で観測された断り文句「覚えるのが大変そう」を名指しで潰す1行)/ CTA。「今は無料」はCMO判断として確定(既に確定済みの事業フェーズ=無料提供→Discoveryのネットワーク効果でmoat→有料化、を対外コピーに翻訳しただけで新規の価格判断ではないため、kensakuへの個別ask不要と判断)。ただしstatusはdraftのまま維持し、公開直前に無料フェーズの継続を再確認してからconfirmedへ上げる運用とした
 - **サイト全体設計・4セクション詳細企画は2026-07-22ですべて完了**: site-design.md(confirmed)、sections/agent-dialogue.md(confirmed、kensaku ask承認済み)、sections/hero.md・flagship-story.md・closing-cta.md(draft、実装直前の軽微な確認事項のみ残)。3セクション間の接続点(story映像のカメラワーク↔対話面の起動演出、常時表示CTA↔エージェントの気配の画面共存)はセッション間で相互に申し送り・反映され、矛盾なく整合している。次フェーズは各セクションのコピー最終確定・実装への引き継ぎ(このOKRの後続作業)
 
-## 次回への申し送り
+### 次回への申し送り
 - kensaku のマーケ大方針は「web 露出面最大化のコンテンツマーケ」で確定。ただしブランドメッセージ確定は 3 人インタビュー結果の後に置くべきと提案済み(okr seq 17)。コンテンツのモノサシ提案 = 本数ではなく AI 引用率・AI 経由流入
 - 「1 セッション当たり価値」モノサシは今後の Right to Win 論の中核候補。コンセプト化する際は「モノサシの教育」設計(入口は需要の言葉 → モノサシを渡す → aachat が No.1)を崩さない
 - まず v5 の pending revision 3 件(A1: d362a50f / C1: 556a287b / D2: c620f896)の publish / decline を registry で確認してから動く(concern は chat に流れないので registry を直接読む)
@@ -69,7 +97,7 @@
 - kensaku の言葉のインプット済みリスト: 好きなコピー参照点は「特になし」。口語は「マルチエージェントをマネジメントして、AIカンパニーを作れるサービス」(ただし「マネジメント」語彙は断り文句を誘発するため messaging では使わない)
 - registry へは aachat-mcp に stdio JSON-RPC で直接アクセスできる(initialize → notifications/initialized → tools/call の 3 行を stdin に流す。MCP tool としては未接続)
 
-## service-site 導入前コピー(2026-09-25、v3提案)
+### service-site 導入前コピー(2026-09-25、v3提案)
 - 対象は現行HTMLの「いつものCodex・Claude Codeを、もっと使いこなす。」〜用途5項目〜「AI時代の新しい仕事の進め方を体験してください。」。kensaku が CMO Session 03d75e00 へ直接依頼(長くなってよい/まさに自分の悩みだと思わせる)。出力: docs/proposals/work-section-copy-v3-2026-09-25.md(proposed、HTML未反映)
 - 前提: CPO の v2(Ask 034675fa)は「修正してから判断する」で戻り、自由記述の理由なし。v1(Ask a47d778b)の5点指示は引き続き有効
 - **v2失敗の診断(CMO)**: (1)痛みのズレ=整理・管理の不便を並べた。真の痛みは「賢さを毎回ゼロから立ち上げ直す作業を自分が全部やっている」 (2)モノサシを渡す前に製品説明(1行目で競合の機能を認めて比較の土俵を機能の有無にした) (3)No.1の理由が一行もない
@@ -87,7 +115,7 @@
 - **承認Ask は未作成**: 終了処理中で `chat ask create` が session_not_running / rejected。届いていない。次の Session が最初に作る(question・option3件・自由記述3点は doc の「未作成のAsk」節に記載済み)
 - 教訓: aachat session の終了処理に入ると Ask 作成・他 session への送信が拒否される。人間の判断が必要な論点は、turn を終える前に Ask を作る。CPO session 5a0683a6 も同じ失敗をしていた
 
-## content-use-cases 立ち上げ(2026-10-05)
+### content-use-cases 立ち上げ(2026-10-05)
 - aachat-marketing の子Projectとして作成。Lead兼書き手 = content-editor(ニコ)。正本は content-use-cases の PROJECT.md / REPORT.md(ニコが作成、doc check 合格)
 - kensaku の決定(Ask 6件): (1)出どころ=社内実践+実行して確かめた想定事例も可。**現行の6節記事構成は最適でない、ゼロベースで再設計** (2)テーマ=ユーザーのニーズが多い仕事。困りごと・できたらいいなを見つけ、aachatで実現する方法を作って紹介。「それができるならaachatを使いたい」と思わせる (3)aachatの利用開始・継続を成果に含める(ブログと違う) (4)2026年12月末までに100本 (5)Lead=ニコ (6)専用branch `content-use-cases` へ直接push、PRなし
 - CMO視点の含意: 事例テーマ選定 = 需要の選定。虫の目の生の声で「人数が多い困りごと」を根拠つきで選ぶのが勝ち筋。依頼されたらニーズ調査・事例の需要評価で関与する
@@ -95,21 +123,21 @@
 - 学び: `chat project create <name> --parent <p> --lead <agent> --stdin` は stdin の brief で Lead の setup Session を起動する。REPORT.md は Lead しか書けないので、決定事項とPROJECT.md案を brief に入れて Lead に書かせ、`chat wait --session` で完了を待って検証する
 
 
-## 2026-10-22 CMO戦略 Session(3ab3819f)の記録
+### 2026-10-22 CMO戦略 Session(3ab3819f)の記録
 
-### 確定した事実(内部)
+#### 確定した事実(内部)
 - 2026-09-20〜10-22 の merge 486 件の大半を Agent Session が出した。ブログ日本語 135 本(目標 1000)、活用事例 2 本(目標 100、2 本目は 10/16 時点 404)、設計思想 2 本、docs 日英 70 ページ、X フォロワー 29・投稿 26・他者反応ほぼ 0。
 - Discover 公開物(公開 API 実測): Agent 3(PR Steward clone 3 / Patent Research & Drafting / Travel Planner)、Skill 9(全部 pr-steward 系)、Document template 1、Workflow 1、Plugin 0。全部 kensaku63 名義。ネットワーク効果の供給はほぼゼロ。
 - 製品の制約: 実行は利用者のマシン上の Claude Code / Codex。`aachat up` が動いている間だけ Agent が働く(Trigger も)。Linux headless は systemd linger で可。導入前提は GitHub・gh・Git・Node22・CLI ログイン。
 - GA4 reader は 503 再認証エラー(人間の `gcloud auth application-default login` 待ち)。10/24 の正式初回取得は自分が所有。
 - kensaku の判断履歴: Dotwise 照会却下(コスト見合わず 09-05)、初見 1 名検証・読者理解確認・about-aachat を終了(10-13〜17)、PR1776 単独復活せず。9/6 マーケ文脈リセット。
 
-### 検証結果ログ
+#### 検証結果ログ
 - 2026-10-22(リサーチ): 日本語圏で Claude Code / Codex の中に「AI社員の会社」を自作する人が 2026-07〜10 だけで 20 人以上記事化(18 担当 8 部署 / 9 体 169 本 / 25 部署 / 8 職種 16 案件 / 7 部署 / 5 人チーム)、テンプレを GitHub 公開(CHIERO・Skova・craftcode・shouki)。壊れる場所は権限・記憶・制約・文脈・常駐。実現したい状態の本人の言葉 = 「判断と承認だけ」。頻出の痛み = 「初めまして」に戻る / PC を閉じている間チームは居ない / ルールが 2 割しか届かない / 並列にすると監視が自分の仕事になる / 毎週どこかが壊れる。→ 需要仮説 (a) 支持、(b) 強く支持、(c) 鮮度と集中は未観測、(d) 何から始めれば分からない は反する(この母集団は自作済み)。
 - 2026-10-22(競合): Paperclip ★105,742(2026-03-02 作成、MIT 自己ホスト、"If OpenClaw is an employee, Paperclip is the company"、Cloud は waitlist、不満 = 予算超過・「社員は作るが動かさない」・名前混同)。OpenClaw ★392,716(Foundation、2.0 で既存サブスクから始める導線、MS Autopilot の土台)。OpenAI dots(09-29、teams of dots 予告)、Codex subagents 既定 ON、Claude Code agent teams / Cowork / Managed Agents。Symphony は 09-15 以降停止。Gas Town は作者が終了宣言(「reusable harness は諦めた」)。「会社」を名乗るのは Paperclip だけ。「仕事の終わりに資産が残り次の物差しになる」を名乗る製品は無い。日本語・Mac・無料・既存契約で「会社」を始められる製品は観測できず。
 - 2026-10-22(鳥の目): Zenn claudecode 11,686 記事 / codex 2,160 / paperclip 2。Claude Code・Codex の利用者数一次値は未収集。
 
-### 判断と仮説(2026-10-22)
+#### 判断と仮説(2026-10-22)
 - 選ばなかった需要: 開発者の並列運用(真っ赤: Conductor・cmux・Herdr・Offrun・Codex /agents・agent teams)、記憶だけ(ツール内に吸収)、創業者の鮮度と集中(未観測・狭い、ビジョンとして保持)、非エンジニア一般の業務 HowTo(入口を通れない)。
 - No.1 の理由 4 つ: (1) aachat 自身がこの製品で回る会社の唯一の公開実例 (2) 会社の構造(Project/Lead/Ask/Workflow/Trigger/共有文書/REPORT/Wiki/Concept)が最初から入っている (3) ツールの外側(Claude Code でも Codex でも同じ Agent repo) (4) 無料・自分の Mac・既存契約・日本語。
 - モノサシ: 「PC を閉じたあとも会社が回るか。仕事の終わりに何が残るか」。1.5m ベネフィット: 「明日の朝、PC を開いたら仕事が進んでいる。同じことを二度言わなくていい」。MOA: 「自分がフォルダで作っていたこれ、製品があったんだ。しかも会社ごと複製できる」。
@@ -117,16 +145,16 @@
 - 12 月 1 万人は計算上届かない(訪問 83 万が必要、現状は二桁以上の差)。先行指標 3 つ(社外毎日利用 100 人 / 複製 500 / 7 日内再依頼 30%)への置き換えを提案。採否は kensaku。
 - 製品への申し送り: 複製→動くまでの手数、PC を閉じても回る経路(headless 手順 or 常駐)、自作フォルダ(CLAUDE.md/AGENTS.md の AI社員一式)の取り込み、複製→初依頼→再依頼の漏斗計測。
 
-### 検証結果ログ(続き)
+#### 検証結果ログ(続き)
 - 2026-10-22 04:00 UTC: Ask a6a680f4 に kensaku が「保留(とてもいい案だが、一旦、保留)」と回答。退けたのは着手時期で、需要の切り方・目的ではない。12 月判定指標の置き換え、Discover 公開範囲も未決。検証・公開・LP 差し替えは一切着手していない。
 
-### 次回への申し送り
+#### 次回への申し送り
 - 戦略は保留中。人間の新たな依頼があるまで、Discover 公開・LP 差し替え・自作者への返信を自分から始めない。再開の依頼が来たら: Discover 公開の実務(discover-prepare-agent / -template skill、identity・skill・knowledge のみ、memory・secret 除外)→ LP FV 案を kensaku の言葉の好みで 3 案 → 自作者 20 人リスト(research doc の表が起点)→ 計測定義を analytics-redesign へ追加。却下なら: 自由記述の方向で需要の切り方を出し直す。
 - GA4: 10/24 の正式初回取得は reader 再認証が前提。人間の操作が済んだか確認してから取る。
 - リサーチの教訓: 並列 6 本の研究 subagent は孫 agent を生み、WebSearch の Session 予算 200 回を数分で使い切り、利用上限(429)で全滅した。raw 取得物は /tmp/aachat-cmo-research-20261022/ に残るので親が自分で抽出できる。次は subagent 2〜3 本に絞り、WebSearch を使う本数を指定し、WebFetch/jina/GitHub API を主にする。
 - 英語圏の生の声・利用者数の一次値・国内「AI社員」SaaS の価格は未収集。第 7 節の仮定を差し替える材料。
 
-## 重要指標ダッシュボード(2026-10-22 実装、Session 44705a3f)
+### 重要指標ダッシュボード(2026-10-22 実装、Session 44705a3f)
 - 確定: 日常利用目標の主指標は「社外DAU」= 全クライアントでその日に1回以上直接依頼した社外の人間アカウント(製品DB日次集計P02、aachatチームmemberを社内として除外)。GAは同意したWebだけなので集客・Web導線の内訳に使う。根拠と定義は Project docs/analytics-database-dashboard-spec.md 3.4節。
 - 仕組み: Trigger 6318bf8b(毎日09:00 JST)→ knowledge/ga4/dashboard_sync.py run → Project DB → html/index.html(DB直読、メンバー限定)。GA正式値の初回は2026-10-24(10/21分)、製品集計は kensaku63/aachat PR #2115 merge後。
 - 申し送り: GA読取ADCは約1日で失効した。本人は2026-10-22にセッション制御延長(A)を選択、設定完了は未確認。数字が溜まったら(7日窓は10/30〜)流入元×入口と社外DAUの推移から最初の打ち手仮説を出す。
