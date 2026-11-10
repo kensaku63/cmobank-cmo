@@ -104,6 +104,43 @@ class StoreTests(unittest.TestCase):
         self.assertFalse(snap['all_accepted'])
         self.assertEqual(sync.coverage_snapshot(cov[('G03', 1, 'total')], dt.date(2026, 10, 22), dt.date(2026, 10, 22))['days'], {'pending': 1})
 
+    def test_usable_windows_pages_over_database_limit(self):
+        # More than two pages, with repeated successes and failed-only windows.
+        for count in (0, 500, 1067, 2500):
+            with self.subTest(count=count):
+                self.db.query('DELETE FROM analytics_report_runs')
+                if count:
+                    self.db.query(f"""
+                        WITH RECURSIVE n(i) AS (SELECT 1 UNION ALL SELECT i+1 FROM n WHERE i < {count * 2 + 3})
+                        INSERT INTO analytics_report_runs
+                          (run_id, batch_id, report_key, definition_version, variant, window_key, period_kind,
+                           period_start, period_end, observed_through, requested_at, finished_at, status, period_state,
+                           coverage_snapshot_json, request_json, quality_json)
+                        SELECT CAST(i AS TEXT), 'b', 'G06', 1, 'total', printf('%064x', (i+1)/2), 'day',
+                          '2026-10-25', '2026-10-25', '2026-10-25', '2026-11-10T00:00:00Z', '2026-11-10T00:00:01Z',
+                          CASE WHEN i > {count * 2} THEN 'failed' WHEN i % 2 = 0 THEN 'empty' ELSE 'ok' END,
+                          'eligible', '{{}}', '{{}}', '{{}}' FROM n
+                    """)
+                database = self.db
+                class LimitedDb:
+                    def query(inner, sql):
+                        rows = database.query(sql)
+                        if len(rows) > 1000 or len(json.dumps(rows).encode()) > 1024 * 1024:
+                            raise sync.SyncError('database_result_too_large')
+                        return rows
+                self.assertEqual(sync.usable_windows(LimitedDb()), {f'{i:064x}' for i in range(1, count + 1)})
+
+    def test_usable_windows_does_not_return_partial_set_after_page_failure(self):
+        class FailingDb:
+            calls = 0
+            def query(inner, sql):
+                inner.calls += 1
+                if inner.calls == 2:
+                    raise sync.SyncError('read failed')
+                return [{'window_key': f'{i:064x}'} for i in range(500)]
+        with self.assertRaises(sync.SyncError):
+            sync.usable_windows(FailingDb())
+
     def test_product_ingest_zero_total_breakdown_empty_and_first_snapshot_kept(self):
         raw = json.dumps({'schema': sync.PRODUCT_SCHEMA, 'start_date': '2026-10-30', 'end_date': '2026-10-31', 'retrieved_at': '2026-11-01T00:00:00Z',
                           'signups': [{'date': '2026-10-31', 'audience': 'external', 'auth_kind': 'github', 'accounts': 2},

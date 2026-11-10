@@ -236,7 +236,21 @@ class Task:
 
 
 def usable_windows(db):
-    return {r['window_key'] for r in db.query("SELECT DISTINCT window_key FROM analytics_report_runs WHERE status IN ('ok', 'empty')")}
+    """Read fixed-size keyset pages, below chat db's 1,000-row / 1-MiB limits.
+
+    Only the fixed-length hash is returned. DISTINCT and the strict cursor keep
+    repeated attempts from duplicating or skipping windows at page boundaries.
+    A failed page propagates; a partial set must never drive the sync plan.
+    """
+    usable, cursor = set(), ''
+    while True:
+        rows = db.query("SELECT DISTINCT window_key FROM analytics_report_runs "
+                        "WHERE status IN ('ok', 'empty') "
+                        f"AND window_key > {q(cursor)} ORDER BY window_key LIMIT 500")
+        usable.update(row['window_key'] for row in rows)
+        if len(rows) < 500:
+            return usable
+        cursor = rows[-1]['window_key']
 
 
 def ga_windows(end, floor):
